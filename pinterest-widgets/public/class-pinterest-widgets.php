@@ -56,10 +56,18 @@ class Pinterest_Widgets {
 	 * @var      object
 	 */
 	protected static $instance = null;
+	
+	/**
+	 * Slug of the plugin screen.
+	 *
+	 * @since    1.0.0
+	 *
+	 * @var      string
+	 */
+	protected $plugin_screen_hook_suffix = null;
 
 	/**
-	 * Initialize the plugin by setting localization and loading public scripts
-	 * and styles.
+	 * Initialize the plugin 
 	 *
 	 * @since     1.0.0
 	 */
@@ -70,6 +78,9 @@ class Pinterest_Widgets {
 
 		// Activate plugin when new blog is added
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
+		
+		// Add settings page
+		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
 	}
 
 	/**
@@ -247,6 +258,45 @@ class Pinterest_Widgets {
 
 		load_textdomain( $domain, trailingslashit( WP_LANG_DIR ) . $domain . '/' . $domain . '-' . $locale . '.mo' );
 
+	}
+	
+	/**
+	 * Register the administration menu for this plugin into the WordPress Dashboard menu.
+	 *
+	 * @since    1.0.0
+	 */
+	public function add_plugin_admin_menu() {
+		// Add main menu item
+		$this->plugin_screen_hook_suffix[] = add_menu_page(
+			$this->get_plugin_title() . __( ' Settings', 'pw' ),
+			__( 'Pinterest Widgets', 'pw' ),
+			'manage_options',
+			$this->plugin_slug,
+			array( $this, 'display_plugin_admin_page' )
+		);
+		
+		// Add Help submenu page
+		$this->plugin_screen_hook_suffix[] = add_submenu_page(
+			$this->plugin_slug,
+			$this->get_plugin_title() . __( ' Help', 'pw' ),
+			__( 'Help', 'pw' ),
+			'manage_options',
+			$this->plugin_slug . '_help',
+			array( $this, 'display_admin_help_page' )
+		);
+	}
+	
+	public function display_plugin_admin_page() {
+		include_once( 'admin/views/admin.php' );
+	}
+	
+	public function display_admin_help_page() {
+		include_once( 'admin/views/help.php' );
+	}
+	
+	// Return the plugin title
+	function get_plugin_title() {
+		return __( 'Pinterest Widgets', 'pw' );
 	}
 
 }
