@@ -1,28 +1,22 @@
 <?php
 /**
- * The WordPress Plugin Boilerplate.
+ * Pinterest Widgets
  *
- * A foundation off of which to build well-documented WordPress plugins that
- * also follow WordPress Coding Standards and PHP best practices.
- *
- * @package   Plugin_Name
- * @author    Your Name <email@example.com>
+ * @package   PW
+ * @author    Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  * @license   GPL-2.0+
- * @link      http://example.com
- * @copyright 2013 Your Name or Company Name
+ * @link      {URL}
+ * @copyright 2013 Phil Derksen
  *
  * @wordpress-plugin
- * Plugin Name:       @TODO
- * Plugin URI:        @TODO
- * Description:       @TODO
- * Version:           1.0.0
- * Author:            @TODO
- * Author URI:        @TODO
- * Text Domain:       plugin-name-locale
- * License:           GPL-2.0+
- * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Domain Path:       /languages
- * GitHub Plugin URI: https://github.com/<owner>/<repo>
+ * Plugin Name: Pinterest Widgets
+ * Plugin URI: 
+ * Description: Easily add Pinterest Widgets and shortcodes to your site
+ * Version: 1.0.0
+ * Author: Phil Derksen
+ * Author URI: http://philderksen.com
+ * License: GPL-2.0+
+ * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
 // If this file is called directly, abort.
@@ -40,7 +34,7 @@ if ( ! defined( 'WPINC' ) ) {
  * - replace `class-plugin-name.php` with the name of the plugin's class file
  *
  */
-require_once( plugin_dir_path( __FILE__ ) . 'public/class-plugin-name.php' );
+require_once( plugin_dir_path( __FILE__ ) . 'public/class-pinterest-widgets.php' );
 
 /*
  * Register hooks that are fired when the plugin is activated or deactivated.
