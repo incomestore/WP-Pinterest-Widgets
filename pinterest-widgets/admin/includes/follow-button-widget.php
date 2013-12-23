@@ -33,6 +33,9 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		$instance = $old_instance;
 		
 		// Update the form when saved
+		$instance['title']        = strip_tags( $new_instance['title'] );
+		$instance['pin_user_url'] = strip_tags( $new_instance['pin_user_url'] );
+		$instance['button_label'] = strip_tags( $new_instance['button_label'] );
         
 		return $instance;
 	}
@@ -55,7 +58,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pib' ); ?>:</label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pib' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>
