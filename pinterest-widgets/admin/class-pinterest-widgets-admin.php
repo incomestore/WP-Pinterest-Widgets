@@ -66,6 +66,8 @@ class Pinterest_Widgets_Admin {
 	
 	// Load files that are needed
 	public function includes() {
+		// include our plugin wide functions
+		include_once( 'includes/functions.php' );
 		
 		// include our Follow Button Widget code
 		include_once( 'includes/follow-button-widget.php' );
