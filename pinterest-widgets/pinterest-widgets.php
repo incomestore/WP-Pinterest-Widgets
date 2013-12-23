@@ -34,11 +34,11 @@ if ( ! defined( 'WPINC' ) ) {
  * - replace `class-plugin-name.php` with the name of the plugin's class file
  *
  */
-if( is_admin() ) {
-	require_once( plugin_dir_path( __FILE__ ) . 'admin/class-pinterest-widgets-admin.php' );
+
+require_once( plugin_dir_path( __FILE__ ) . 'admin/class-pinterest-widgets-admin.php' );
 	
-	add_action( 'plugins_loaded', array( 'Pinterest_Widgets_Admin', 'get_instance' ) );
-}
+add_action( 'plugins_loaded', array( 'Pinterest_Widgets_Admin', 'get_instance' ) );
+
 
 require_once( plugin_dir_path( __FILE__ ) . 'public/class-pinterest-widgets.php' );
 
