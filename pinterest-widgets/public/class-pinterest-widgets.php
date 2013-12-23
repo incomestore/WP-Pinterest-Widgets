@@ -78,8 +78,16 @@ class Pinterest_Widgets {
 
 		// Activate plugin when new blog is added
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
+		
+		// Add public scripts
+		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
-
+	
+	
+	public function enqueue_scripts() {
+		// Enqueue pinit.js - will need to add some kind of check here to make sure this will not be called if PIB is running
+		wp_enqueue_script( $this->plugin_slug . '-pinterest-pinit', '//assets.pinterest.com/js/pinit.js', array(), null, true );
+	}
 	/**
 	 * Return the plugin slug.
 	 *
