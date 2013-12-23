@@ -58,7 +58,17 @@ class Pinterest_Widgets_Admin {
 		// Add an action link pointing to the options page.
 		$plugin_basename = plugin_basename( plugin_dir_path( __DIR__ ) . $this->plugin_slug . '.php' );
 		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
+		
+		// Make sure we load our include files
+		add_action( 'init', array( $this, 'includes' ), 0 );
 
+	}
+	
+	// Load files that are needed
+	public function includes() {
+		
+		// include our Follow Button Widget code
+		include_once( 'includes/follow-button-widget.php' );
 	}
 
 	/**

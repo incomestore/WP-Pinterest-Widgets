@@ -17,7 +17,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'pw_follow_button_widget',
-			__( 'Pinterest Follow Button WIdget', 'pw' ),
+			__( 'Pinterest Follow Button Widget', 'pw' ),
 			array(
 				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
 				'description'	=>	__( 'Add a Pinterest Follow Button to any widget area.', 'pib' )
@@ -48,13 +48,12 @@ class PW_Follow_Button_Widget extends WP_Widget {
         
 		$instance = wp_parse_args( (array) $instance, $default );
 		
-		$title                     = strip_tags($instance['title']);
-		$pib_url_of_webpage_widget = strip_tags( $instance['pib_url_of_webpage_widget'] );
-		$pib_url_of_img_widget     = strip_tags( $instance['pib_url_of_img_widget'] );
-		$pib_description_widget    = strip_tags( $instance['pib_description_widget'] );
-		$pib_button_type_widget    = $instance['button_type'];
+		$title        = strip_tags( $instance['title'] );
+		$pin_user_url = strip_tags( $instance['pin_user_url'] );
+		$button_label = strip_tags( $instance['button_label'] );
 		
 		?>
+
 		<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pib' ); ?>:</label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
