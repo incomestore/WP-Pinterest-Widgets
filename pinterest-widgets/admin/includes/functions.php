@@ -3,8 +3,11 @@
 
 // Returns the code needed for the Follow Button
 // Based on Pinterest code on 12/23/2012
-function pw_follow_button( ) {
+function pw_follow_button( $url, $label ) {
 	
+	$follow_button = '<a data-pin-do="buttonFollow" href="' . esc_attr( $url ) . '">' . $label . '</a>';
+	
+	return $follow_button;
 }
 
 // Returns the code needed for the Pin Widget
