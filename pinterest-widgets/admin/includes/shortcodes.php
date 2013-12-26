@@ -20,7 +20,7 @@ function pw_follow_button( $attr ) {
 					'label' => 'Follow'
 				), $attr ) );
 	
-	return pw_pin_link( $url, $label, 'buttonFollow' );
+	return '<div class="pw-wrap pw-shortcode">' . pw_pin_link( $url, $label, 'buttonFollow' ) . '</div>';
 }
 add_shortcode( 'pin_follow', 'pw_follow_button' );
 
@@ -31,7 +31,7 @@ function pw_pin_widget( $attr ) {
 					'url'   => 'none'
 				), $attr ) );
 	
-	return pw_pin_link( $url, '', 'embedPin' );
+	return '<div class="pw-wrap pw-shortcode">' . pw_pin_link( $url, '', 'embedPin' ) . '</div>';
 }
 add_shortcode( 'pin_widget', 'pw_pin_widget' );
 
@@ -43,7 +43,7 @@ function pw_board_widget( $attr ) {
 					'size'  => 'square'
 				), $attr ) );
 	
-	return pw_widget_boards( $url, '', $size, 'embedBoard' );
+	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $url, '', $size, 'embedBoard' ) . '</div>';
 }
 add_shortcode( 'pin_board', 'pw_board_widget' );
 
@@ -55,6 +55,6 @@ function pw_profile_widget( $attr ) {
 					'size'  => 'square'
 				), $attr ) );
 	
-	return pw_widget_boards( $url, '', $size, 'embedUser' );
+	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $url, '', $size, 'embedUser' ) . '</div>';
 }
 add_shortcode( 'pin_profile', 'pw_profile_widget' );
