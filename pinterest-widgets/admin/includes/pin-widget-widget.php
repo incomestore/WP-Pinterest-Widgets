@@ -34,6 +34,8 @@ class PW_Pin_Widget_Widget extends WP_Widget {
 		$instance = $old_instance;
 		
 		// Update the form when saved
+		$instance['title']   = strip_tags( $new_instance['title'] );
+		$instance['pin_url'] = strip_tags( $new_instance['pin_url'] );
         
 		return $instance;
 	}
