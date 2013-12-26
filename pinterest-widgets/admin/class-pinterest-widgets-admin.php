@@ -69,8 +69,11 @@ class Pinterest_Widgets_Admin {
 		// include our plugin wide functions
 		include_once( 'includes/functions.php' );
 		
-		// include our Follow Button Widget code
+		// include our Follow Button widget code
 		include_once( 'includes/follow-button-widget.php' );
+		
+		// include our Pin Widget widget code
+		include_once( 'includes/pin-widget-widget.php' );
 	}
 
 	/**
