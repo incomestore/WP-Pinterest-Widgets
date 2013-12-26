@@ -34,7 +34,9 @@ class PW_Board_Widget_Widget extends WP_Widget {
 		$instance = $old_instance;
 		
 		// Update the form when saved
-		
+		$instance['title']      = strip_tags( $new_instance['title'] );
+		$instance['board_url']  = strip_tags( $new_instance['board_url'] );
+		$instance['board_size'] = $new_instance['board_size'];
 		
 		
 		return $instance;
