@@ -80,6 +80,9 @@ class Pinterest_Widgets_Admin {
 		
 		// include our Board Widget widget code
 		include_once( 'includes/board-widget-widget.php' );
+		
+		// include our shortcodes file
+		include_once( 'includes/shortcodes.php' );
 	}
 
 	/**
