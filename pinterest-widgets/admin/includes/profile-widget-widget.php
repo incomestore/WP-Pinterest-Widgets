@@ -17,7 +17,7 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 	public function __construct() {
 		parent::__construct(
 			'pw_profile_widget_widget',
-			__( 'Pinterest Pin Widget', 'pw' ),
+			__( 'Pinterest Profile Widget', 'pw' ),
 			array(
 				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
 				'description'	=>	__( 'Add a Pinterest Profile Widget to any widget area.', 'pib' )
@@ -41,7 +41,38 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 
 	public function form( $instance ) {
         // Widget form
+		$default = array(
+			'title'                     => '',
+			'pin_user_url'              => '',
+			'profile_widget_size'       => 'square'
+		);
 		
+		$instance = wp_parse_args( (array) $instance, $default );
+		
+		$title               = strip_tags( $instance['title'] );
+		$pin_user_url        = strip_tags( $instance['pin_user_url'] );
+		$profile_widget_size = strip_tags( $instance['profile_widget_size'] );
+		
+		?>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pw' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'pin_user_url' ); ?>"><?php _e( 'Pinterest User URL', 'pw' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_user_url' ); ?>" name="<?php echo $this->get_field_name( 'pin_user_url' ); ?>" type="text" value="<?php echo esc_attr( $pin_user_url ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'profile_widget_size' ); ?>"><?php _e( 'Widget Size', 'pw' ); ?></label><br />
+			<select name="<?php echo $this->get_field_name( 'profile_widget_size' ); ?>" id="<?php echo $this->get_field_id( 'profile_widget_size' ); ?>">
+				<option value="square" <?php selected( $instance['profile_widget_size'], 'square' ); ?>><?php _e( 'Square', 'pw' ); ?></option>
+				<option value="sidebar" <?php selected( $instance['profile_widget_size'], 'sidebar' ); ?>><?php _e( 'Sidebar', 'pw' ); ?></option>
+				<option value="header" <?php selected( $instance['profile_widget_size'], 'header' ); ?>><?php _e( 'Header', 'pw' ); ?></option>
+			</select>
+		</p>
+		
+		<?php
 	}
 }
 
