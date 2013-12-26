@@ -86,7 +86,9 @@ class Pinterest_Widgets {
 	
 	public function enqueue_scripts() {
 		// Enqueue pinit.js - will need to add some kind of check here to make sure this will not be called if PIB is running
-		wp_enqueue_script( $this->plugin_slug . '-pinterest-pinit', '//assets.pinterest.com/js/pinit.js', array(), null, true );
+		// For now going to just check for either PIB Lite or Pro classes
+		if( ! class_exists( 'Pinterest_Pin_It_Button' ) && ! class_exists( 'Pinterest_Pin_It_Button_Pro' ) )
+			wp_enqueue_script( $this->plugin_slug . '-pinterest-pinit', '//assets.pinterest.com/js/pinit.js', array(), null, true );
 	}
 	/**
 	 * Return the plugin slug.
