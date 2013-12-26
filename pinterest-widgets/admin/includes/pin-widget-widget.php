@@ -38,7 +38,7 @@ class PW_Pin_Widget_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo pw_pin_link( $pin_url, '', 'embedPin' );
+		echo '<div class="pw-wrap pw-widget pw-pin-widget">' . pw_pin_link( $pin_url, '', 'embedPin' ) . '</div>';
 		
 		echo $after_widget;
 	}

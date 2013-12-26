@@ -39,7 +39,7 @@ class PW_Board_Widget_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo pw_widget_boards( $board_url, '', $board_size, 'embedBoard' );
+		echo '<div class="pw-wrap pw-widget pw-board-widget">' . pw_widget_boards( $board_url, '', $board_size, 'embedBoard' ) . '</div>';
 		
 		echo $after_widget;
 	}

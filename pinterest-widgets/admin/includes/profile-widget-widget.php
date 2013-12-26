@@ -39,7 +39,7 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo pw_widget_boards( $pin_user_url, '', $profile_widget_size, 'embedUser' );
+		echo '<div class="pw-wrap pw-widget pw-profile-widget">' . pw_widget_boards( $pin_user_url, '', $profile_widget_size, 'embedUser' ) . '</div>';
 		
 		echo $after_widget;
 	}
