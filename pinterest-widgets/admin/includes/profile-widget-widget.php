@@ -34,8 +34,11 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 		$instance = $old_instance;
 		
 		// Update the form when saved
+		$instance['title']               = strip_tags( $new_instance['title'] );
+		$instance['pin_user_url']        = strip_tags( $new_instance['pin_user_url'] );
+		$instance['profile_widget_size'] = $new_instance['profile_widget_size'];
 		
-        
+		
 		return $instance;
 	}
 
