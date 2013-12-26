@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Represents the view for the Follow Button Widget
+ * Represents the view for the Pin Widget widget
  *
  * @package    PW
  * @subpackage admin/includes
