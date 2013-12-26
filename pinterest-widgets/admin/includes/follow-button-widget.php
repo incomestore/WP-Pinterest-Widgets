@@ -40,7 +40,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo pw_follow_button( $pin_user_url, $button_label );
+		echo pw_pin_link( $pin_user_url, $button_label, 'buttonFollow' );
 		
 		echo $after_widget;
 	}
