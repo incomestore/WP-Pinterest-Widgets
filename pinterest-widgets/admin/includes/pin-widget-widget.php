@@ -40,6 +40,29 @@ class PW_Pin_Widget_Widget extends WP_Widget {
 
 	public function form( $instance ) {
         // Widget form
+		
+		$default = array(
+			'title'                     => '',
+			'pin_url'              => '',
+		);
+		
+		$instance = wp_parse_args( (array) $instance, $default );
+		
+		$title   = strip_tags( $instance['title'] );
+		$pin_url = strip_tags( $instance['pin_url'] );
+		
+		?>
+
+		<p>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pib' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'pin_url' ); ?>"><?php _e( 'Pin URL'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_url' ); ?>" name="<?php echo $this->get_field_name( 'pin_url' ); ?>" type="text" value="<?php echo esc_attr( $pin_url ); ?>" />
+		</p>
+		
+		<?php
 	}
 }
 
