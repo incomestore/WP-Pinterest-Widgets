@@ -77,6 +77,9 @@ class Pinterest_Widgets_Admin {
 		
 		// include our Profile Widget widget code 
 		include_once( 'includes/profile-widget-widget.php' );
+		
+		// include our Board Widget widget code
+		include_once( 'includes/board-widget-widget.php' );
 	}
 
 	/**
