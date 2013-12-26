@@ -27,7 +27,21 @@ class PW_Board_Widget_Widget extends WP_Widget {
 
 	public function widget( $args, $instance ) {
 		// public facing widget code
+		extract( $args );
 		
+		$title      = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+		$board_url  = $instance['board_url'];
+		$board_size = $instance['board_size'];
+		
+		echo $before_widget;
+		
+		if ( ! empty( $title ) ) {
+			echo $before_title . $title . $after_title;
+        }
+		
+		echo pw_board_widget( $board_url, $board_size );
+		
+		echo $after_widget;
 	}
 
 	public function update( $new_instance, $old_instance ) {
