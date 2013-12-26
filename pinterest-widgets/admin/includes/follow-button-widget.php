@@ -20,7 +20,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			__( 'Pinterest Follow Button Widget', 'pw' ),
 			array(
 				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
-				'description'	=>	__( 'Add a Pinterest Follow Button to any widget area.', 'pib' )
+				'description'	=>	__( 'Add a Pinterest Follow Button to any widget area.', 'pw' )
 			)
 		);
 	}
@@ -74,7 +74,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pib' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pw' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>

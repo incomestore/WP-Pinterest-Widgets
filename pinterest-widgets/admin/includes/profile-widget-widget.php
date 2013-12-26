@@ -20,7 +20,7 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 			__( 'Pinterest Profile Widget', 'pw' ),
 			array(
 				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
-				'description'	=>	__( 'Add a Pinterest Profile Widget to any widget area.', 'pib' )
+				'description'	=>	__( 'Add a Pinterest Profile Widget to any widget area.', 'pw' )
 			)
 		);
 	}
