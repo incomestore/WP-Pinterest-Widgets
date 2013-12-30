@@ -15,7 +15,48 @@
 
 <div class="wrap">
 
-	<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+	
 
-	<!-- @TODO: Provide markup for your options page here. -->
+	<div id="pw-settings">
+		<div id="pw-settings-content">
+
+			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+
+			<h3 class="title"><?php _e( 'Pinterest Follow Button Shortcode', 'pw' ); ?></h3>
+
+			<p>
+				<?php _e( 'Use the shortcode', 'pw' ); ?> <code>[pin_follow]</code> <?php _e( 'to display the button within your content.', 'pw' ); ?>
+			</p>
+			<p>
+				<?php _e( 'Use the function', 'pw' ); ?> <code><?php echo htmlentities( '<?php echo do_shortcode(\'[pin_follow]\'); ?>' ); ?></code>
+				<?php _e( 'to display within template or theme files.', 'pw' ); ?>
+			</p>
+
+			<h4><?php _e( 'Available Attributes', 'pw' ); ?></h4>
+
+			<table class="widefat importers" cellspacing="0">
+				<thead>
+				<tr>
+					<th><?php _e( 'Attribute', 'pw' ); ?></th>
+					<th><?php _e( 'Description', 'pw' ); ?></th>
+					<th><?php _e( 'Choices', 'pw' ); ?></th>
+					<th><?php _e( 'Default', 'pw' ); ?></th>
+				</tr>
+				</thead>
+				<tbody>
+				<tr>
+					<td>url</td>
+					<td><?php _e( 'The Pinterest User URL to be followed', 'pw' ); ?></td>
+					<td>string value of URL</td>
+					<td>none</td>
+				</tr>
+				<tr>
+					<td>label</td>
+					<td><?php _e( 'The text for the button label', 'pw' ); ?></td>
+					<td>string value of button text</td>
+					<td>Follow</td>
+				</tr>
+				</tbody>
+			</table>
+	</div>
 </div>
