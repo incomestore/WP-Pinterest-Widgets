@@ -108,24 +108,15 @@ class Pinterest_Widgets_Admin {
 	 * @since    1.0.0
 	 */
 	public function add_plugin_admin_menu() {
-
-		// Add main menu item
-		$this->plugin_screen_hook_suffix[] = add_menu_page(
+		
+		// Add settings & help page to the WordPress Settings menu
+		$this->plugin_screen_hook_suffix[] = add_submenu_page(
+			'options-general.php',
 			$this->get_plugin_title() . __( ' Settings', 'pw' ),
 			__( 'Pinterest Widgets', 'pw' ),
 			'manage_options',
 			$this->plugin_slug,
 			array( $this, 'display_plugin_admin_page' )
-		);
-		
-		// Add Help submenu page
-		$this->plugin_screen_hook_suffix[] = add_submenu_page(
-			$this->plugin_slug,
-			$this->get_plugin_title() . __( ' Help', 'pw' ),
-			__( 'Help', 'pw' ),
-			'manage_options',
-			$this->plugin_slug . '_help',
-			array( $this, 'display_admin_help_page' )
 		);
 
 	}
@@ -138,16 +129,6 @@ class Pinterest_Widgets_Admin {
 	public function display_plugin_admin_page() {
 		include_once( 'views/admin.php' );
 	}
-	
-	/**
-	 * Render the settings page for this plugin.
-	 *
-	 * @since    1.0.0
-	 */
-	public function display_admin_help_page() {
-		include_once( 'views/admin.php' );
-	}
-	
 
 	/**
 	 * Add settings action link to the plugins page.
