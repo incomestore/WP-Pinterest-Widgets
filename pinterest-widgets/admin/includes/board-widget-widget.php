@@ -73,15 +73,15 @@ class PW_Board_Widget_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pw' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional):', 'pw' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'board_url' ); ?>"><?php _e( 'Pinterest Board URL', 'pw' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'board_url' ); ?>"><?php _e( 'Pinterest Board URL:', 'pw' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'board_url' ); ?>" name="<?php echo $this->get_field_name( 'board_url' ); ?>" type="text" value="<?php echo esc_attr( $board_url ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'board_size' ); ?>"><?php _e( 'Board Size', 'pw' ); ?></label><br />
+			<label for="<?php echo $this->get_field_id( 'board_size' ); ?>"><?php _e( 'Board Size:', 'pw' ); ?></label><br />
 			<select name="<?php echo $this->get_field_name( 'board_size' ); ?>" id="<?php echo $this->get_field_id( 'board_size' ); ?>">
 				<option value="square" <?php selected( $instance['board_size'], 'square' ); ?>><?php _e( 'Square', 'pw' ); ?></option>
 				<option value="sidebar" <?php selected( $instance['board_size'], 'sidebar' ); ?>><?php _e( 'Sidebar', 'pw' ); ?></option>

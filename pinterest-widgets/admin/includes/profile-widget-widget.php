@@ -73,15 +73,15 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 		?>
 
 		<p>
-			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional)', 'pw' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php _e( 'Title (optional):', 'pw' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'pin_user_url' ); ?>"><?php _e( 'Pinterest User URL', 'pw' ); ?></label>
+			<label for="<?php echo $this->get_field_id( 'pin_user_url' ); ?>"><?php _e( 'Pinterest User URL:', 'pw' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_user_url' ); ?>" name="<?php echo $this->get_field_name( 'pin_user_url' ); ?>" type="text" value="<?php echo esc_attr( $pin_user_url ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'profile_widget_size' ); ?>"><?php _e( 'Widget Size', 'pw' ); ?></label><br />
+			<label for="<?php echo $this->get_field_id( 'profile_widget_size' ); ?>"><?php _e( 'Widget Size:', 'pw' ); ?></label><br />
 			<select name="<?php echo $this->get_field_name( 'profile_widget_size' ); ?>" id="<?php echo $this->get_field_id( 'profile_widget_size' ); ?>">
 				<option value="square" <?php selected( $instance['profile_widget_size'], 'square' ); ?>><?php _e( 'Square', 'pw' ); ?></option>
 				<option value="sidebar" <?php selected( $instance['profile_widget_size'], 'sidebar' ); ?>><?php _e( 'Sidebar', 'pw' ); ?></option>
