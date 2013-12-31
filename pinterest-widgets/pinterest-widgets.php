@@ -5,13 +5,13 @@
  * @package   PW
  * @author    Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  * @license   GPL-2.0+
- * @link      {URL}
- * @copyright 2013 Phil Derksen
+ * @link      http://pinterestplugin.com
+ * @copyright 2014 Phil Derksen
  *
  * @wordpress-plugin
  * Plugin Name: Pinterest Widgets
- * Plugin URI: 
- * Description: Easily add Pinterest Widgets and shortcodes to your site
+ * TODO Plugin URI: http://pinterestplugin.com/pinterest-widgets-plugin/
+ * Description: Easily add a Pinterest Follow Button, Pin Widget, Board Widget and Profile Widget to your site. Includes shortcodes!
  * Version: 1.0.0
  * Author: Phil Derksen
  * Author URI: http://philderksen.com
