@@ -32,6 +32,15 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 		$title               = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
 		$pin_username        = $instance['pin_username'];
 		$profile_widget_size = $instance['profile_widget_size'];
+		$custom_sizes = array();
+		
+		if( $profile_widget_size == 'custom' ) {
+			$custom_sizes = array( 
+				'width'       => $instance['custom_width'],
+				'height'      => $instance['custom_height'],
+				'board_width' => $instance['custom_board_width']
+			);
+		}
 		
 		echo $before_widget;
 		
@@ -39,7 +48,7 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo '<div class="pw-wrap pw-widget pw-profile-widget">' . pw_widget_boards( $pin_username, '', $profile_widget_size, 'embedUser' ) . '</div>';
+		echo '<div class="pw-wrap pw-widget pw-profile-widget">' . pw_widget_boards( $pin_username, '', $profile_widget_size, $custom_sizes, 'embedUser' ) . '</div>';
 		
 		echo $after_widget;
 	}
@@ -51,6 +60,10 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 		$instance['title']               = strip_tags( $new_instance['title'] );
 		$instance['pin_username']        = strip_tags( $new_instance['pin_username'] );
 		$instance['profile_widget_size'] = $new_instance['profile_widget_size'];
+		// Update custom size options
+		$instance['custom_width']       = strip_tags( $new_instance['custom_width'] );
+		$instance['custom_height']      = strip_tags( $new_instance['custom_height'] );
+		$instance['custom_board_width'] = strip_tags( $new_instance['custom_board_width'] );
 		
 		
 		return $instance;
@@ -59,9 +72,12 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 	public function form( $instance ) {
         // Widget form
 		$default = array(
-			'title'                     => '',
-			'pin_username'              => '',
-			'profile_widget_size'       => 'sidebar'
+			'title'               => '',
+			'pin_username'        => '',
+			'profile_widget_size' => 'sidebar',
+			'custom_width'        => '',
+			'custom_height'       => '',
+			'custom_board_width'  => ''
 		);
 		
 		$instance = wp_parse_args( (array) $instance, $default );
@@ -69,6 +85,10 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 		$title               = strip_tags( $instance['title'] );
 		$pin_username        = strip_tags( $instance['pin_username'] );
 		$profile_widget_size = strip_tags( $instance['profile_widget_size'] );
+		// custom sizes
+		$custom_width       = strip_tags( $instance['custom_width'] );
+		$custom_height      = strip_tags( $instance['custom_height'] );
+		$custom_board_width = strip_tags( $instance['custom_board_width'] );
 		
 		?>
 
@@ -86,7 +106,23 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 				<option value="square" <?php selected( $instance['profile_widget_size'], 'square' ); ?>><?php _e( 'Square', 'pw' ); ?></option>
 				<option value="sidebar" <?php selected( $instance['profile_widget_size'], 'sidebar' ); ?>><?php _e( 'Sidebar', 'pw' ); ?></option>
 				<option value="header" <?php selected( $instance['profile_widget_size'], 'header' ); ?>><?php _e( 'Header', 'pw' ); ?></option>
+				<option value="custom" <?php selected( $instance['profile_widget_size'], 'custom' ); ?>><?php _e( 'Custom', 'pw' ); ?></option>
 			</select>
+		</p>
+		<p>
+			Only used with Custom board size
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'custom_width' ); ?>"><?php _e( 'Image Width:', 'pw' ); ?></label>
+			<input id="<?php echo $this->get_field_id( 'custom_width' ); ?>" name="<?php echo $this->get_field_name( 'custom_width' ); ?>" type="text" value="<?php echo esc_attr( $custom_width ); ?>" placeholder="minimum 60" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'custom_height' ); ?>"><?php _e( 'Board Height:', 'pw' ); ?></label>
+			<input id="<?php echo $this->get_field_id( 'custom_height' ); ?>" name="<?php echo $this->get_field_name( 'custom_height' ); ?>" type="text" value="<?php echo esc_attr( $custom_height ); ?>" placeholder="minimum 60" />
+		</p>
+		<p>
+			<label for="<?php echo $this->get_field_id( 'custom_board_width' ); ?>"><?php _e( 'Board Width:', 'pw' ); ?></label>
+			<input id="<?php echo $this->get_field_id( 'custom_board_width' ); ?>" name="<?php echo $this->get_field_name( 'custom_board_width' ); ?>" type="text" value="<?php echo esc_attr( $custom_board_width ); ?>" placeholder="minimum 130" />
 		</p>
 		
 		<?php
