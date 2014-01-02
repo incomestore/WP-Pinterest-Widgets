@@ -24,6 +24,12 @@ function pw_register_settings() {
 					'<p class="description">' . __( 'Check this option if you have <code>pinit.js</code> referenced in another plugin, widget or your theme. ' .
 						'Ouputting <code>pinit.js</code> more than once on a page can cause conflicts.', 'pw' ) . '</p>',
 				'type' => 'checkbox'
+			),
+			'uninstall_save_settings' => array(
+				'id'   => 'uninstall_save_settings',
+				'name' => __( 'Save Settings', 'pw' ),
+				'desc' => __( 'Save your settings when uninstalling this plugin. Useful when upgrading or re-installing.', 'pw' ),
+				'type' => 'checkbox'
 			)
 		)
 	);
