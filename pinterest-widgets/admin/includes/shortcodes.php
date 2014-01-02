@@ -65,9 +65,22 @@ function pw_profile_widget( $attr ) {
 	
 	extract( shortcode_atts( array(
 					'username' => 'pinterest',
-					'size'     => 'square'
+					'size'     => 'square',
+					'image_width'  => '60',
+					'board_height' => '800',
+					'board_width'  => '150'
 				), $attr ) );
 	
-	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $username, '', $size, '', 'embedUser' ) . '</div>';
+	$custom_sizes = array();
+	
+	if( $size == 'custom' ) {
+		$custom_sizes = array(
+			'width'       => $image_width,
+			'height'      => $board_height,
+			'board_width' => $board_width
+		);
+	}
+	
+	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $username, '', $size, $custom_sizes, 'embedUser' ) . '</div>';
 }
 add_shortcode( 'pin_profile', 'pw_profile_widget' );
