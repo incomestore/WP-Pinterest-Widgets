@@ -61,7 +61,7 @@ class PW_Board_Widget_Widget extends WP_Widget {
 		$default = array(
 			'title'      => '',
 			'board_url'  => '',
-			'board_size' => 'square'
+			'board_size' => 'sidebar'
 		);
 		
 		$instance = wp_parse_args( (array) $instance, $default );
