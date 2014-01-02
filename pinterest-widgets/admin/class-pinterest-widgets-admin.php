@@ -61,6 +61,9 @@ class Pinterest_Widgets_Admin {
 		
 		$pw_options = pw_get_settings();
 		
+		// include admin notices
+		include_once( 'includes/admin-notices.php' );
+		
 		// include our plugin wide functions
 		include_once( 'includes/functions.php' );
 		
