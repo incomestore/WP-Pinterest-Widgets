@@ -36,13 +36,6 @@ add_action( 'plugins_loaded', array( 'Pinterest_Widgets_Admin', 'get_instance' )
 
 require_once( plugin_dir_path( __FILE__ ) . 'public/class-pinterest-widgets.php' );
 
-/*
- * Register hooks that are fired when the plugin is activated or deactivated.
- * When the plugin is deleted, the uninstall.php file is loaded.
- */
-register_activation_hook( __FILE__, array( 'Pinterest_Widgets', 'activate' ) );
-register_deactivation_hook( __FILE__, array( 'Pinterest_Widgets', 'deactivate' ) );
-
-
+// Get instance of our plugin
 add_action( 'plugins_loaded', array( 'Pinterest_Widgets', 'get_instance' ) );
 
