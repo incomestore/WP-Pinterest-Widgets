@@ -41,6 +41,10 @@ function pw_widget_boards( $url, $label, $size, $action ) {
 		$board_width  = 900;
 	}
 	
+	if( $action == 'embedUser' ) {
+		$url = "http://www.pinterest.com/" . $url;
+	}
+	
 	$widget = '<a data-pin-do="' . $action . '" href="' . esc_attr( $url ) . '" data-pin-scale-width="' . $scale_width . '" data-pin-scale-height="' . $scale_height . '" data-pin-board-width="' . $board_width . '">' . $label . '</a>';
 	
 	return $widget;
