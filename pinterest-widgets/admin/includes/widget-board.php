@@ -107,7 +107,7 @@ class PW_Board_Widget_Widget extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			Custom Size options:
+			Only used with Custom board size
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'custom_width' ); ?>"><?php _e( 'Image Width:', 'pw' ); ?></label>
