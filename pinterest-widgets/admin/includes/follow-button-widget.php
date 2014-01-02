@@ -61,8 +61,8 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		
 		$default = array(
 			'title'                     => '',
-			'pin_user_url'              => '',
-			'button_label'               => 'Follow'
+			'pin_user_url'              => 'http://www.pinterest.com/pinterest/',
+			'button_label'               => 'Follow me on Pinterest'
 		);
         
 		$instance = wp_parse_args( (array) $instance, $default );
@@ -82,7 +82,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_user_url' ); ?>" name="<?php echo $this->get_field_name( 'pin_user_url' ); ?>" type="text" value="<?php echo esc_attr( $pin_user_url ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'button_label' ); ?>"><?php _e( 'Button Label:'); ?></label>
+			<label for="<?php echo $this->get_field_id( 'button_label' ); ?>"><?php _e( 'Button Label:`'); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'button_label' ); ?>" name="<?php echo $this->get_field_name( 'button_label' ); ?>" type="text" value="<?php echo esc_attr( $button_label ); ?>" />
 		</p>
 		
