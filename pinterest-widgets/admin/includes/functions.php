@@ -20,7 +20,7 @@ function pw_pin_follow( $username, $label ) {
 
 // Returns the code needed for the Profile Widget or Board Widget
 // Based on Pinterest code on 12/23/2012
-function pw_widget_boards( $url, $label, $size, $action ) {
+function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	
 	// Default size options based on option "Square" from Pinterest
 	$scale_width  = 80;
@@ -39,6 +39,13 @@ function pw_widget_boards( $url, $label, $size, $action ) {
 		$scale_width  = 115;
 		$scale_height = 120;
 		$board_width  = 900;
+	}
+	
+	// Custom sizes
+	if( $size == 'custom' ) {
+		$scale_width  = $custom_sizes['width'];
+		$scale_height = $custom_sizes['height'];
+		$board_width  = $custom_sizes['board_width'];
 	}
 	
 	if( $action == 'embedUser' ) {
