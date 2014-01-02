@@ -3,11 +3,19 @@
 
 // Returns the code needed for the Follow Button or Pin Widget
 // Based on Pinterest code on 12/23/2012
-function pw_pin_link( $url, $label, $action ) {
+/*function pw_pin_link( $url, $label, $action ) {
 	
 	$pin_link = '<a data-pin-do="' . $action . '" href="' . esc_attr( $url ) . '">' . $label . '</a>';
 	
 	return $pin_link;
+}*/
+
+// Follow button code
+function pw_pin_follow( $username, $label ) {
+	
+	$pin_follow = '<a data-pin-do="buttonFollow" href="http://www.pinterest.com/' . esc_attr( $username ) . '/">' . $label . '</a>';
+	
+	return $pin_follow;
 }
 
 // Returns the code needed for the Profile Widget or Board Widget
