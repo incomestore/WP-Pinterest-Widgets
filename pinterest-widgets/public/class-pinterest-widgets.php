@@ -1,12 +1,10 @@
 <?php
 /**
- * Plugin Name.
+ * Define public facing class.
  *
- * @package   PW
- * @author    Phil Derksen <email@example.com>
- * @license   GPL-2.0+
- * @link      http://example.com
- * @copyright 2013
+ * @package    PW
+ * @subpackage public
+ * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  */
 
 class Pinterest_Widgets {

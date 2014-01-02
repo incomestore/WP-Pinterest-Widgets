@@ -1,12 +1,10 @@
 <?php
 /**
- * Plugin Name.
+ * Define plugin admin class.
  *
- * @package   Plugin_Name_Admin
- * @author    Your Name <email@example.com>
- * @license   GPL-2.0+
- * @link      http://example.com
- * @copyright 2013 Your Name or Company Name
+ * @package    PW
+ * @subpackage admin
+ * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  */
 
 class Pinterest_Widgets_Admin {

@@ -1,5 +1,12 @@
 <?php
 
+/**
+ * Define plugin reusable functions.
+ *
+ * @package    PW
+ * @subpackage admin/includes
+ * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
+ */
 
 // Returns the code needed for the Follow Button or Pin Widget
 // Based on Pinterest code on 12/23/2012
