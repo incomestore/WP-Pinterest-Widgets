@@ -50,8 +50,8 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		
 		// Update the form when saved
 		$instance['title']        = strip_tags( $new_instance['title'] );
-		$instance['pin_username'] = strip_tags( $new_instance['pin_username'] );
-		$instance['button_label'] = strip_tags( $new_instance['button_label'] );
+		$instance['pin_username'] = ( ! empty( $new_instance['pin_username'] ) ? strip_tags( $new_instance['pin_username'] ) : 'pinterest' );
+		$instance['button_label'] = ( ! empty( $new_instance['button_label'] ) ? strip_tags( $new_instance['button_label'] ) : 'Follow me on Pinterest' );
         
 		return $instance;
 	}
