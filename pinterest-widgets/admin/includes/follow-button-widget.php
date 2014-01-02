@@ -31,7 +31,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		extract( $args );
 		
 		$title        = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$pin_user_url = $instance['pin_user_url'];
+		$pin_username = $instance['pin_username'];
 		$button_label = $instance['button_label'];
 		
 		echo $before_widget;
@@ -40,7 +40,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo '<div class="pw-wrap pw-widget pw-follow-button-widget">' . pw_pin_link( $pin_user_url, $button_label, 'buttonFollow' ) . '</div>';
+		echo '<div class="pw-wrap pw-widget pw-follow-button-widget">' . pw_pin_link( $pin_username, $button_label, 'buttonFollow' ) . '</div>';
 		
 		echo $after_widget;
 	}
@@ -50,7 +50,7 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		
 		// Update the form when saved
 		$instance['title']        = strip_tags( $new_instance['title'] );
-		$instance['pin_user_url'] = strip_tags( $new_instance['pin_user_url'] );
+		$instance['pin_username'] = strip_tags( $new_instance['pin_username'] );
 		$instance['button_label'] = strip_tags( $new_instance['button_label'] );
         
 		return $instance;
@@ -60,15 +60,15 @@ class PW_Follow_Button_Widget extends WP_Widget {
         // Widget form
 		
 		$default = array(
-			'title'                     => '',
-			'pin_user_url'              => 'http://www.pinterest.com/pinterest/',
-			'button_label'               => 'Follow me on Pinterest'
+			'title'        => '',
+			'pin_username' => '',
+			'button_label' => ''
 		);
         
 		$instance = wp_parse_args( (array) $instance, $default );
 		
 		$title        = strip_tags( $instance['title'] );
-		$pin_user_url = strip_tags( $instance['pin_user_url'] );
+		$pin_username = strip_tags( $instance['pin_username'] );
 		$button_label = strip_tags( $instance['button_label'] );
 		
 		?>
@@ -78,12 +78,12 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'pin_user_url' ); ?>"><?php _e( 'Pinterest User URL:'); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_user_url' ); ?>" name="<?php echo $this->get_field_name( 'pin_user_url' ); ?>" type="text" value="<?php echo esc_attr( $pin_user_url ); ?>" />
+			<label for="<?php echo $this->get_field_id( 'pin_username' ); ?>"><?php _e( 'Pinterest Username:'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_username' ); ?>" name="<?php echo $this->get_field_name( 'pin_username' ); ?>" type="text" value="<?php echo esc_attr( $pin_username ); ?>" placeholder="pinterest" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'button_label' ); ?>"><?php _e( 'Button Label:`'); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'button_label' ); ?>" name="<?php echo $this->get_field_name( 'button_label' ); ?>" type="text" value="<?php echo esc_attr( $button_label ); ?>" />
+			<label for="<?php echo $this->get_field_id( 'button_label' ); ?>"><?php _e( 'Button Label:'); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'button_label' ); ?>" name="<?php echo $this->get_field_name( 'button_label' ); ?>" type="text" value="<?php echo esc_attr( $button_label ); ?>" placeholder="Follow me on Pinterest" />
 		</p>
 		
 		<?php
