@@ -39,11 +39,24 @@ add_shortcode( 'pin_widget', 'pw_pin_widget' );
 function pw_board_widget( $attr ) {
 	
 	extract( shortcode_atts( array(
-					'url'   => 'none',
-					'size'  => 'square'
+					'url'          => '',
+					'size'         => 'square',
+					'image_width'  => '60',
+					'board_height' => '800',
+					'board_width'  => '150'
 				), $attr ) );
 	
-	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $url, '', $size, 'embedBoard' ) . '</div>';
+	$custom_sizes = array();
+	
+	if( $size == 'custom' ) {
+		$custom_sizes = array(
+			'width'       => $image_width,
+			'height'      => $board_height,
+			'board_width' => $board_width
+		);
+	}
+	
+	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $url, '', $size, $custom_sizes, 'embedBoard' ) . '</div>';
 }
 add_shortcode( 'pin_board', 'pw_board_widget' );
 
