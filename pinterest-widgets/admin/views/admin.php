@@ -67,6 +67,11 @@
 				</tbody>
 			</table>
 			
+			<h4>Examples</h4>
+			<ul class="ul-disc">
+				<li><code>[pin_follow username="pinterest" label="Click to Follow Pinterest!"]</code></li>
+			</ul>
+			
 			<!-- Pin Widget Shortcode Help -->
 			<h3 class="title"><?php _e( 'Pinterest Pin Widget Shortcode', 'pw' ); ?></h3>
 
@@ -98,6 +103,11 @@
 				</tr>
 				</tbody>
 			</table>
+			
+			<h4>Examples</h4>
+			<ul class="ul-disc">
+				<li><code>[pin_widget url="http://www.pinterest.com/pin/99360735500167749/"]</code></li>
+			</ul>
 			
 			<!-- Pin Board Widget Shortcode Help -->
 			<h3 class="title"><?php _e( 'Pinterest Board Widget Shortcode', 'pw' ); ?></h3>
@@ -160,6 +170,13 @@
 				</tbody>
 			</table>
 			
+			<h4>Examples</h4>
+			<ul class="ul-disc">
+				<li><code>[pin_board url="http://www.pinterest.com/pinterest/pin-pets/"]</code></li>
+				<li><code>[pin_board url="http://www.pinterest.com/pinterest/pin-pets/" size="header"]</code></li>
+				<li><code>[pin_board url="http://www.pinterest.com/pinterest/pin-pets/" size="custom" image_width="100" board_width="900" board_height="450"]</code></li>
+			</ul>
+			
 			<!-- Profile Widget Shortcode Help -->
 			<h3 class="title"><?php _e( 'Pinterest Profile Widget Shortcode', 'pw' ); ?></h3>
 
@@ -220,5 +237,12 @@
 				</tr>
 				</tbody>
 			</table>
+			
+			<h4>Examples</h4>
+			<ul class="ul-disc">
+				<li><code>[pin_profile username="pinterest"]</code></li>
+				<li><code>[pin_profile username="pinterest" size="sidebar"]</code></li>
+				<li><code>[pin_profile username="pinterest" size="custom" image_width="125" board_width="1200" board_height="600"]</code></li>
+			</ul>
 	</div>
 </div>
