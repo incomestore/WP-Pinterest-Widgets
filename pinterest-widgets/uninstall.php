@@ -10,3 +10,6 @@
 if ( ! defined( 'WP_UNINSTALL_PLUGIN' ) ) {
 	exit;
 }
+
+// Delete general settings option
+delete_option( 'pw_settings_general' );
