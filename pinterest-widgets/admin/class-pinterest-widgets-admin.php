@@ -54,6 +54,13 @@ class Pinterest_Widgets_Admin {
 	
 	// Load files that are needed
 	public function includes() {
+		// Setup global options and load plugin settings
+		global $pw_options;
+		
+		include_once( 'includes/register-settings.php' );
+		
+		$pw_options = pw_get_settings();
+		
 		// include our plugin wide functions
 		include_once( 'includes/functions.php' );
 		

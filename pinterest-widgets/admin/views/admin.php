@@ -19,8 +19,20 @@
 
 	<div id="pw-settings">
 		<div id="pw-settings-content">
-
+			
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
+			
+			<form method="post" action="options.php">
+				<?php
+					// Show our settings before any help
+					settings_fields( 'pw_settings_general' );
+					do_settings_sections( 'pw_settings_general' );
+
+					submit_button();
+				?>
+			</form>
+			
+			<h2>Help</h2>
 
 			<h3 class="title"><?php _e( 'Pinterest Follow Button Shortcode', 'pw' ); ?></h3>
 
