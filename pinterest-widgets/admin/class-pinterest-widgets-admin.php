@@ -70,16 +70,16 @@ class Pinterest_Widgets_Admin {
 		include_once( 'includes/functions.php' );
 		
 		// include our Follow Button widget code
-		include_once( 'includes/follow-button-widget.php' );
+		include_once( 'includes/widget-follow-button.php' );
 		
 		// include our Pin Widget widget code
-		include_once( 'includes/pin-widget-widget.php' );
+		include_once( 'includes/widget-pin.php' );
 		
 		// include our Profile Widget widget code 
-		include_once( 'includes/profile-widget-widget.php' );
+		include_once( 'includes/widget-profile.php' );
 		
 		// include our Board Widget widget code
-		include_once( 'includes/board-widget-widget.php' );
+		include_once( 'includes/widget-board.php' );
 		
 		// include our shortcodes file
 		include_once( 'includes/shortcodes.php' );
