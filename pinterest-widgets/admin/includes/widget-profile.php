@@ -12,11 +12,11 @@
 if ( ! defined( 'ABSPATH' ) )
 	exit;
 
-class PW_Profile_Widget_Widget extends WP_Widget {
+class PW_Profile_Widget extends WP_Widget {
 	
 	public function __construct() {
 		parent::__construct(
-			'pw_profile_widget_widget',
+			'pw_profile_widget',
 			__( 'Pinterest Profile Widget', 'pw' ),
 			array(
 				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
@@ -129,6 +129,6 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 	}
 }
 
-add_action( 'widgets_init', create_function( '', 'register_widget("PW_Profile_Widget_Widget");' ) );
+add_action( 'widgets_init', create_function( '', 'register_widget("PW_Profile_Widget");' ) );
 
 
