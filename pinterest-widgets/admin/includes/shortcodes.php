@@ -51,10 +51,10 @@ add_shortcode( 'pin_board', 'pw_board_widget' );
 function pw_profile_widget( $attr ) {
 	
 	extract( shortcode_atts( array(
-					'url'   => 'none',
-					'size'  => 'square'
+					'username' => 'pinterest',
+					'size'     => 'square'
 				), $attr ) );
 	
-	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $url, '', $size, 'embedUser' ) . '</div>';
+	return '<div class="pw-wrap pw-shortcode">' . pw_widget_boards( $username, '', $size, '', 'embedUser' ) . '</div>';
 }
 add_shortcode( 'pin_profile', 'pw_profile_widget' );
