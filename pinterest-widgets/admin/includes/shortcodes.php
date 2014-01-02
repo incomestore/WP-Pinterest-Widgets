@@ -16,11 +16,11 @@ if ( ! defined( 'ABSPATH' ) )
 function pw_follow_button( $attr ) {
 	
 	extract( shortcode_atts( array(
-					'url'   => 'none',
-					'label' => 'Follow'
+					'username' => 'pinterest',
+					'label'    => 'Follow me on Pinterest'
 				), $attr ) );
 	
-	return '<div class="pw-wrap pw-shortcode">' . pw_pin_link( $url, $label, 'buttonFollow' ) . '</div>';
+	return '<div class="pw-wrap pw-shortcode">' . pw_pin_follow( $username, $label ) . '</div>';
 }
 add_shortcode( 'pin_follow', 'pw_follow_button' );
 
