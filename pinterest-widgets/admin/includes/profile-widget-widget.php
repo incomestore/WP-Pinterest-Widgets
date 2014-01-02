@@ -30,7 +30,7 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 		extract( $args );
 		
 		$title               = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$pin_user_url        = $instance['pin_user_url'];
+		$pin_username        = $instance['pin_username'];
 		$profile_widget_size = $instance['profile_widget_size'];
 		
 		echo $before_widget;
@@ -39,7 +39,7 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 			echo $before_title . $title . $after_title;
         }
 		
-		echo '<div class="pw-wrap pw-widget pw-profile-widget">' . pw_widget_boards( $pin_user_url, '', $profile_widget_size, 'embedUser' ) . '</div>';
+		echo '<div class="pw-wrap pw-widget pw-profile-widget">' . pw_widget_boards( $pin_username, '', $profile_widget_size, 'embedUser' ) . '</div>';
 		
 		echo $after_widget;
 	}
@@ -49,7 +49,7 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 		
 		// Update the form when saved
 		$instance['title']               = strip_tags( $new_instance['title'] );
-		$instance['pin_user_url']        = strip_tags( $new_instance['pin_user_url'] );
+		$instance['pin_username']        = strip_tags( $new_instance['pin_username'] );
 		$instance['profile_widget_size'] = $new_instance['profile_widget_size'];
 		
 		
@@ -60,14 +60,14 @@ class PW_Profile_Widget_Widget extends WP_Widget {
         // Widget form
 		$default = array(
 			'title'                     => '',
-			'pin_user_url'              => '',
-			'profile_widget_size'       => 'square'
+			'pin_username'              => '',
+			'profile_widget_size'       => 'sidebar'
 		);
 		
 		$instance = wp_parse_args( (array) $instance, $default );
 		
 		$title               = strip_tags( $instance['title'] );
-		$pin_user_url        = strip_tags( $instance['pin_user_url'] );
+		$pin_username        = strip_tags( $instance['pin_username'] );
 		$profile_widget_size = strip_tags( $instance['profile_widget_size'] );
 		
 		?>
@@ -77,8 +77,8 @@ class PW_Profile_Widget_Widget extends WP_Widget {
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'pin_user_url' ); ?>"><?php _e( 'Pinterest User URL:', 'pw' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_user_url' ); ?>" name="<?php echo $this->get_field_name( 'pin_user_url' ); ?>" type="text" value="<?php echo esc_attr( $pin_user_url ); ?>" />
+			<label for="<?php echo $this->get_field_id( 'pin_username' ); ?>"><?php _e( 'Pinterest Username:', 'pw' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'pin_username' ); ?>" name="<?php echo $this->get_field_name( 'pin_username' ); ?>" type="text" value="<?php echo esc_attr( $pin_username ); ?>" placeholder="pinterest" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'profile_widget_size' ); ?>"><?php _e( 'Widget Size:', 'pw' ); ?></label><br />
