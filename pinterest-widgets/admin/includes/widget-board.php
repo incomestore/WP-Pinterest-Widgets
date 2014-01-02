@@ -72,9 +72,12 @@ class PW_Board_Widget_Widget extends WP_Widget {
 	public function form( $instance ) {
         // Widget form
 		$default = array(
-			'title'      => '',
-			'board_url'  => '',
-			'board_size' => 'sidebar'
+			'title'              => '',
+			'board_url'          => '',
+			'board_size'         => 'sidebar',
+			'custom_width'       => '',
+			'custom_height'      => '',
+			'custom_board_width' => ''
 		);
 		
 		$instance = wp_parse_args( (array) $instance, $default );
