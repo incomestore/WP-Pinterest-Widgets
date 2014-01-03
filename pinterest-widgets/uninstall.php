@@ -22,5 +22,11 @@ if( ! empty( $general['uninstall_save_settings'] ) ) {
 	
 	// Delete general settings option
 	delete_option( 'pw_settings_general' );
+	
+	// Delete any widgets left behind
+	delete_option( 'widget_pw_board_widget' );
+	delete_option( 'widget_pw_follow_button_widget' );
+	delete_option( 'widget_pw_pin_widget' );
+	delete_option( 'widget_pw_profile_widget' );
 }
 	
