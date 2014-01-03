@@ -131,6 +131,17 @@ function pw_missing_callback( $args ) {
  * Function used to return an array of all of the plugin settings
  */
 function pw_get_settings() {
+	
+	if( ! get_option( 'pw_has_run' ) ) {
+		
+		$general = get_option( 'pw_settings_general' );
+		
+		$general['uninstall_save_settings'] = 1;
+		
+		update_option( 'pw_settings_general', $general );
+		
+		add_option( 'pw_has_run', 1 );
+	}
 
 	$general_settings         = is_array( get_option( 'pw_settings_general' ) ) ? get_option( 'pw_settings_general' )  : array();
 

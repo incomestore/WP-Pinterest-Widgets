@@ -20,6 +20,9 @@ if( ! empty( $general['uninstall_save_settings'] ) ) {
 } else {
 	// Delete options because they don't want them saved
 	
+	// Delete our first pass through variable
+	delete_option( 'pw_has_run' );
+	
 	// Delete general settings option
 	delete_option( 'pw_settings_general' );
 	
