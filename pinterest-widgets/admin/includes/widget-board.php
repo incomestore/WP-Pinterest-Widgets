@@ -61,9 +61,9 @@ class PW_Board_Widget extends WP_Widget {
 		$instance['board_url']  = strip_tags( $new_instance['board_url'] );
 		$instance['board_size'] = $new_instance['board_size'];
 		// Update custom size options
-		$instance['custom_width']       = strip_tags( $new_instance['custom_width'] );
-		$instance['custom_height']      = strip_tags( $new_instance['custom_height'] );
-		$instance['custom_board_width'] = strip_tags( $new_instance['custom_board_width'] );
+		$instance['custom_width']       = ( strip_tags( $new_instance['custom_width'] ) >= 60 ? $new_instance['custom_width'] : '' );
+		$instance['custom_height']      = ( strip_tags( $new_instance['custom_height'] ) >= 60 ? $new_instance['custom_height'] : '' );
+		$instance['custom_board_width'] = ( strip_tags( $new_instance['custom_board_width'] ) >= 130 ? $new_instance['custom_board_width'] : '' );
 		
 		
 		return $instance;
