@@ -29,8 +29,8 @@ class PW_Pin_Widget extends WP_Widget {
 		// public facing widget code
 		extract( $args );
 		
-		$title        = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$pin_url = $instance['pin_url'];
+		$title   = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
+		$pin_url = ( ! empty( $instance['pin_url'] ) ? $instance['pin_url'] : 'http://www.pinterest.com/pin/99360735500167749/' );
 		
 		echo $before_widget;
 		
