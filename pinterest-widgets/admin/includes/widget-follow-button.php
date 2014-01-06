@@ -31,8 +31,9 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		extract( $args );
 		
 		$title        = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$pin_username = $instance['pin_username'];
-		$button_label = $instance['button_label'];
+		// If the user saved empty values then we will send the defaults to the function
+		$pin_username = ( ! empty( $instance['pin_username'] ) ? $instance['pin_username'] : 'pinterest' );
+		$button_label = ( ! empty( $instance['button_label'] ) ? $instance['button_label'] : 'Follow me on Pinterest' );
 		
 		echo $before_widget;
 		
@@ -50,8 +51,8 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		
 		// Update the form when saved
 		$instance['title']        = strip_tags( $new_instance['title'] );
-		$instance['pin_username'] = ( ! empty( $new_instance['pin_username'] ) ? strip_tags( $new_instance['pin_username'] ) : 'pinterest' );
-		$instance['button_label'] = ( ! empty( $new_instance['button_label'] ) ? strip_tags( $new_instance['button_label'] ) : 'Follow me on Pinterest' );
+		$instance['pin_username'] = strip_tags( $new_instance['pin_username'] );
+		$instance['button_label'] = strip_tags( $new_instance['button_label'] );
         
 		return $instance;
 	}
