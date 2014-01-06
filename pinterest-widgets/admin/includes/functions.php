@@ -61,8 +61,8 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	
 	$widget  = '<a data-pin-do="' . $action . '"';
 	$widget .= 'href="' . esc_attr( $url ) . '"';
-	$widget .= ( ! empty( $board_width ) ? 'data-pin-scale-width="' . $scale_width . '"' : '' );
-	$widget .= ( ! empty( $board_width ) ? 'data-pin-scale-height="' . $scale_height . '"' : '' );
+	$widget .= ( ! empty( $scale_width ) ? 'data-pin-scale-width="' . $scale_width . '"' : '' );
+	$widget .= ( ! empty( $scale_height ) ? 'data-pin-scale-height="' . $scale_height . '"' : '' );
 	// if the board_width is empty then it has been set to 'auto' so we need to leave the data-pin-board-width attribute completely out
 	$widget .= ( ! empty( $board_width ) ? 'data-pin-board-width="' . $board_width . '"' : '' );
 	$widget .= '>' . $label . '</a>';

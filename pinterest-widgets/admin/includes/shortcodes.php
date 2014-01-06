@@ -41,9 +41,9 @@ function pw_board_widget( $attr ) {
 	extract( shortcode_atts( array(
 					'url'          => '',
 					'size'         => 'square',
-					'image_width'  => '60',
-					'board_height' => '800',
-					'board_width'  => '150'
+					'image_width'  => '',
+					'board_height' => '',
+					'board_width'  => ''
 				), $attr ) );
 	
 	$custom_sizes = array();
@@ -66,9 +66,9 @@ function pw_profile_widget( $attr ) {
 	extract( shortcode_atts( array(
 					'username' => 'pinterest',
 					'size'     => 'square',
-					'image_width'  => '60',
-					'board_height' => '800',
-					'board_width'  => '150'
+					'image_width'  => '',
+					'board_height' => '',
+					'board_width'  => ''
 				), $attr ) );
 	
 	$custom_sizes = array();
