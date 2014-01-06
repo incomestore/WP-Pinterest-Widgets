@@ -61,9 +61,9 @@ class PW_Profile_Widget extends WP_Widget {
 		$instance['pin_username']        = strip_tags( $new_instance['pin_username'] );
 		$instance['profile_widget_size'] = $new_instance['profile_widget_size'];
 		// Update custom size options
-		$instance['custom_width']       = strip_tags( $new_instance['custom_width'] );
-		$instance['custom_height']      = strip_tags( $new_instance['custom_height'] );
-		$instance['custom_board_width'] = strip_tags( $new_instance['custom_board_width'] );
+		$instance['custom_width']       = ( strip_tags( $new_instance['custom_width'] ) >= 60 ? $new_instance['custom_width'] : '' );
+		$instance['custom_height']      = ( strip_tags( $new_instance['custom_height'] ) >= 60 ? $new_instance['custom_height'] : '' );
+		$instance['custom_board_width'] = ( strip_tags( $new_instance['custom_board_width'] ) >= 130 ? $new_instance['custom_board_width'] : '' );
 		
 		
 		return $instance;
