@@ -110,7 +110,7 @@ class PW_Profile_Widget extends WP_Widget {
 			</select>
 		</p>
 		<p>
-			Only used with Custom board size
+			The following values are used only with a 'Custom' widget size:
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'custom_width' ); ?>"><?php _e( 'Image Width:', 'pw' ); ?></label><br />
