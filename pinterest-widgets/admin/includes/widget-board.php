@@ -30,15 +30,15 @@ class PW_Board_Widget extends WP_Widget {
 		extract( $args );
 		
 		$title      = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$board_url  = $instance['board_url'];
+		$board_url  = ( ! empty( $instance['board_url'] ) ? $instance['board_url'] : 'http://www.pinterest.com/pinterest/pin-pets/' );
 		$board_size = $instance['board_size'];
 		$custom_sizes = array();
 		
 		if( $board_size == 'custom' ) {
 			$custom_sizes = array( 
-				'width'       => $instance['custom_width'],
-				'height'      => $instance['custom_height'],
-				'board_width' => $instance['custom_board_width']
+				'width'       => ( ! empty( $instance['custom_width'] ) ? $instance['custom_width'] : 92 ),
+				'height'      => ( ! empty( $instance['custom_height'] ) ? $instance['custom_height'] : 175 ),
+				'board_width' => ( ! empty( $instance['custom_board_width'] ) ? $instance['custom_board_width'] : '' )
 			);
 		}
 		
