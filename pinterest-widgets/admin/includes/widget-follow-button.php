@@ -19,7 +19,6 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			'pw_follow_button_widget',
 			__( 'Pinterest Follow Button Widget', 'pw' ),
 			array(
-				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
 				'description'	=>	__( 'Add a Pinterest Follow Button to any widget area.', 'pw' )
 			)
 		);

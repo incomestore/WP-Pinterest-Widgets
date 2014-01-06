@@ -19,7 +19,6 @@ class PW_Pin_Widget extends WP_Widget {
 			'pw_pin_widget',
 			__( 'Pinterest Pin Widget', 'pw' ),
 			array(
-				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
 				'description'	=>	__( 'Add a Pinterest Pin Widget to any widget area.', 'pw' )
 			)
 		);

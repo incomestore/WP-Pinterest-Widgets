@@ -19,7 +19,6 @@ class PW_Board_Widget extends WP_Widget {
 			'pw_board_widget',
 			__( 'Pinterest Board Widget', 'pw' ),
 			array(
-				'classname'		=>	'', // Wrap widget with "clear fix" CSS trick.
 				'description'	=>	__( 'Add a Pinterest Board Widget to any widget area.', 'pw' )
 			)
 		);
