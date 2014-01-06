@@ -36,8 +36,8 @@ class PW_Board_Widget extends WP_Widget {
 		
 		if( $board_size == 'custom' ) {
 			$custom_sizes = array( 
-				'width'       => ( ! empty( $instance['custom_width'] ) ? $instance['custom_width'] : 92 ),
-				'height'      => ( ! empty( $instance['custom_height'] ) ? $instance['custom_height'] : 175 ),
+				'width'       => ( ! empty( $instance['custom_width'] ) ? $instance['custom_width'] : '' ),
+				'height'      => ( ! empty( $instance['custom_height'] ) ? $instance['custom_height'] : '' ),
 				'board_width' => ( ! empty( $instance['custom_board_width'] ) ? $instance['custom_board_width'] : '' )
 			);
 		}
