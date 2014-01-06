@@ -98,7 +98,7 @@ class PW_Board_Widget extends WP_Widget {
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'board_url' ); ?>"><?php _e( 'Pinterest Board URL:', 'pw' ); ?></label>
-			<input class="widefat" id="<?php echo $this->get_field_id( 'board_url' ); ?>" name="<?php echo $this->get_field_name( 'board_url' ); ?>" type="text" value="<?php echo esc_attr( $board_url ); ?>" />
+			<input class="widefat" id="<?php echo $this->get_field_id( 'board_url' ); ?>" name="<?php echo $this->get_field_name( 'board_url' ); ?>" type="text" value="<?php echo esc_attr( $board_url ); ?>" placeholder="http://www.pinterest.com/pinterest/pin-pets/" />
 		</p>
 		<p>
 			<label for="<?php echo $this->get_field_id( 'board_size' ); ?>"><?php _e( 'Board Size:', 'pw' ); ?></label><br />
@@ -113,16 +113,16 @@ class PW_Board_Widget extends WP_Widget {
 			Only used with Custom board size
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'custom_width' ); ?>"><?php _e( 'Image Width:', 'pw' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'custom_width' ); ?>" name="<?php echo $this->get_field_name( 'custom_width' ); ?>" type="text" value="<?php echo esc_attr( $custom_width ); ?>" placeholder="minimum 60" />
+			<label for="<?php echo $this->get_field_id( 'custom_width' ); ?>"><?php _e( 'Image Width:', 'pw' ); ?></label><br />
+			<input class="widefat" id="<?php echo $this->get_field_id( 'custom_width' ); ?>" name="<?php echo $this->get_field_name( 'custom_width' ); ?>" type="number" value="<?php echo esc_attr( $custom_width ); ?>" placeholder="min:60; leave blank for 92" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'custom_height' ); ?>"><?php _e( 'Board Height:', 'pw' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'custom_height' ); ?>" name="<?php echo $this->get_field_name( 'custom_height' ); ?>" type="text" value="<?php echo esc_attr( $custom_height ); ?>" placeholder="minimum 60" />
+			<label for="<?php echo $this->get_field_id( 'custom_height' ); ?>"><?php _e( 'Board Height:', 'pw' ); ?></label><br />
+			<input class="widefat" id="<?php echo $this->get_field_id( 'custom_height' ); ?>" name="<?php echo $this->get_field_name( 'custom_height' ); ?>" type="number" value="<?php echo esc_attr( $custom_height ); ?>" placeholder="min:60; leave blank for 175" />
 		</p>
 		<p>
-			<label for="<?php echo $this->get_field_id( 'custom_board_width' ); ?>"><?php _e( 'Board Width:', 'pw' ); ?></label>
-			<input id="<?php echo $this->get_field_id( 'custom_board_width' ); ?>" name="<?php echo $this->get_field_name( 'custom_board_width' ); ?>" type="text" value="<?php echo esc_attr( $custom_board_width ); ?>" placeholder="minimum 130" />
+			<label for="<?php echo $this->get_field_id( 'custom_board_width' ); ?>"><?php _e( 'Board Width:', 'pw' ); ?></label><br />
+			<input class="widefat" id="<?php echo $this->get_field_id( 'custom_board_width' ); ?>" name="<?php echo $this->get_field_name( 'custom_board_width' ); ?>" type="number" value="<?php echo esc_attr( $custom_board_width ); ?>" placeholder="min:130; leave blank for auto" />
 		</p>
 		
 		<?php
