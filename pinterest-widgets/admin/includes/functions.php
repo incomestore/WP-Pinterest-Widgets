@@ -50,9 +50,9 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	
 	// Custom sizes
 	if( $size == 'custom' ) {
-		$scale_width  = $custom_sizes['width'];
-		$scale_height = $custom_sizes['height'];
-		$board_width  = $custom_sizes['board_width'];
+		$scale_width  = ( $custom_sizes['width'] >= 60 ? $custom_sizes['width'] : '' );
+		$scale_height = ( $custom_sizes['height'] >= 60 ? $custom_sizes['width'] : '' );
+		$board_width  = ( $custom_sizes['board_width'] >= 130 ? $custom_sizes['board_width'] : '' );
 	}
 	
 	if( $action == 'embedUser' ) {
