@@ -30,15 +30,15 @@ class PW_Profile_Widget extends WP_Widget {
 		extract( $args );
 		
 		$title               = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
-		$pin_username        = $instance['pin_username'];
+		$pin_username        = ( ! empty( $instance['pin_username'] ) ? $instance['pin_username'] : 'pinterest' );
 		$profile_widget_size = $instance['profile_widget_size'];
 		$custom_sizes = array();
 		
 		if( $profile_widget_size == 'custom' ) {
 			$custom_sizes = array( 
-				'width'       => $instance['custom_width'],
-				'height'      => $instance['custom_height'],
-				'board_width' => $instance['custom_board_width']
+				'width'       => ( ! empty( $instance['custom_width'] ) ? $instance['custom_width'] : 92 ),
+				'height'      => ( ! empty( $instance['custom_height'] ) ? $instance['custom_height'] : 175 ),
+				'board_width' => ( ! empty( $instance['custom_board_width'] ) ? $instance['custom_board_width'] : '' )
 			);
 		}
 		
