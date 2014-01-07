@@ -13,6 +13,13 @@ Various widgets for Pinterest including the Follow Button, Pin Widget, Profile W
 
 Add simple Pinterest widgets to your site in no time. Behavior and appearance taken from the [official Pinterest widget builder](http://business.pinterest.com/widget-builder/).
 
+Includes:
+
+* Follow button: Invite people to follow you on Pinterest from your site.
+* Pin widget: Embed one of your Pins on your site.
+* Profile widget: Show up to 30 of your latest Pins on your site.
+* Board widget: Show up to 30 of your favorite board’s latest Pins.
+
 A "Pin It" Button widget is *not* included in this plugin and is instead included in the separate ["Pin It" Button plugin](http://wordpress.org/plugins/pinterest-pin-it-button/).
 
 == Installation ==
