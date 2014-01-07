@@ -68,7 +68,7 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	if( $size == 'custom' ) {
 		// We need to check each item to make sure it is above the minimum value required by Pinterest and if not set to blank so it doesn't get output
 		$scale_width  = ( $custom_sizes['width'] >= 60 ? $custom_sizes['width'] : '' );
-		$scale_height = ( $custom_sizes['height'] >= 60 ? $custom_sizes['width'] : '' );
+		$scale_height = ( $custom_sizes['height'] >= 60 ? $custom_sizes['height'] : '' );
 		$board_width  = ( $custom_sizes['board_width'] >= 130 ? $custom_sizes['board_width'] : '' );
 	}
 	
