@@ -153,19 +153,19 @@
 					<td>image_width</td>
 					<td><?php _e( 'The size of the images on the board', 'pw' ); ?></td>
 					<td>Any number greater than 60</td>
-					<td>60</td>
+					<td>92</td>
 				</tr>
 				<tr>
 					<td>board_height</td>
 					<td><?php _e( 'The height of the board', 'pw' ); ?></td>
 					<td>Any number greater than 60</td>
-					<td>800</td>
+					<td>175</td>
 				</tr>
 				<tr>
 					<td>board_width</td>
 					<td><?php _e( 'The width of the board', 'pw' ); ?></td>
 					<td>Any number greater than 130</td>
-					<td>150</td>
+					<td>auto</td>
 				</tr>
 				</tbody>
 			</table>
@@ -221,19 +221,19 @@
 					<td>image_width</td>
 					<td><?php _e( 'The size of the images on the widget', 'pw' ); ?></td>
 					<td>Any number greater than 60</td>
-					<td>60</td>
+					<td>92</td>
 				</tr>
 				<tr>
 					<td>board_height</td>
 					<td><?php _e( 'The height of the widget', 'pw' ); ?></td>
 					<td>Any number greater than 60</td>
-					<td>800</td>
+					<td>175</td>
 				</tr>
 				<tr>
 					<td>board_width</td>
 					<td><?php _e( 'The width of the widget', 'pw' ); ?></td>
 					<td>Any number greater than 130</td>
-					<td>150</td>
+					<td>auto</td>
 				</tr>
 				</tbody>
 			</table>
