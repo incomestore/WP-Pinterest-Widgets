@@ -8,8 +8,13 @@
  * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  */
 
-// Returns the code needed for the Follow Button or Pin Widget
-// Based on Pinterest code on 12/23/2012
+/**
+	 * Return the HTML output for the Pinterest Pin Widget
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    string
+	 */
 function pw_pin_link( $url, $label, $action ) {
 	
 	$pin_link = '<a data-pin-do="' . $action . '" href="' . esc_attr( $url ) . '">' . $label . '</a>';
@@ -17,7 +22,13 @@ function pw_pin_link( $url, $label, $action ) {
 	return $pin_link;
 }
 
-// Follow button code
+/**
+	 * Return the HTML output for the Pinterest Follow Button
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    string
+	 */
 function pw_pin_follow( $username, $label ) {
 	
 	$pin_follow = '<a data-pin-do="buttonFollow" href="http://www.pinterest.com/' . esc_attr( $username ) . '/">' . $label . '</a>';
@@ -25,8 +36,13 @@ function pw_pin_follow( $username, $label ) {
 	return $pin_follow;
 }
 
-// Returns the code needed for the Profile Widget or Board Widget
-// Based on Pinterest code on 12/23/2012
+/**
+	 * Return the HTML output for the Pinterest Profile Widget or Pinterest Board Widget
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    string
+	 */
 function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	
 	// Default size options based on option "Square" from Pinterest
@@ -50,6 +66,7 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	
 	// Custom sizes
 	if( $size == 'custom' ) {
+		// We need to check each item to make sure it is above the minimum value required by Pinterest and if not set to blank so it doesn't get output
 		$scale_width  = ( $custom_sizes['width'] >= 60 ? $custom_sizes['width'] : '' );
 		$scale_height = ( $custom_sizes['height'] >= 60 ? $custom_sizes['width'] : '' );
 		$board_width  = ( $custom_sizes['board_width'] >= 130 ? $custom_sizes['board_width'] : '' );

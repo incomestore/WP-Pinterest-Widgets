@@ -14,6 +14,12 @@ if ( ! defined( 'ABSPATH' ) )
 
 class PW_Board_Widget extends WP_Widget {
 	
+	/**
+	 * Create the new Pinterest Board Widget in the admin
+	 *
+	 * @since     1.0.0
+	 *
+	 */
 	public function __construct() {
 		parent::__construct(
 			'pw_board_widget',
@@ -23,9 +29,16 @@ class PW_Board_Widget extends WP_Widget {
 			)
 		);
 	}
-
+	
+	/**
+	 * Return public facing code for the Pinterest Board Widget
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    string
+	 */
 	public function widget( $args, $instance ) {
-		// public facing widget code
+		
 		extract( $args );
 		
 		$title      = apply_filters( 'widget_title', empty( $instance['title'] ) ? '' : $instance['title'], $instance, $this->id_base );
@@ -51,7 +64,14 @@ class PW_Board_Widget extends WP_Widget {
 		
 		echo $after_widget;
 	}
-
+	
+	/**
+	 * Save and return updated widget settings
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    array		new instance for the widget settings
+	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		
@@ -67,7 +87,13 @@ class PW_Board_Widget extends WP_Widget {
 		
 		return $instance;
 	}
-
+	
+	/**
+	 * Widget form output for Pinterest Board Widget
+	 *
+	 * @since     1.0.0
+	 *
+	 */
 	public function form( $instance ) {
         // Widget form
 		$default = array(

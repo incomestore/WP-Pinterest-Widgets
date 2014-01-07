@@ -67,7 +67,7 @@ add_action( 'admin_init', 'pw_register_settings' );
 /*
  * Return generic add_settings_field $args parameter array.
  *
- * @since     2.0.0
+ * @since     1.0.0
  *
  * @param   string  $option   Single settings option key.
  * @param   string  $section  Section of settings apge.
@@ -97,6 +97,9 @@ function pw_get_settings_field_args( $option, $section ) {
 
 /*
  * Single checkbox callback function
+ * 
+ * @since 1.0.0
+ * 
  */
 function pw_checkbox_callback( $args ) {
 	global $pw_options;
@@ -114,6 +117,9 @@ function pw_checkbox_callback( $args ) {
 
 /*
  * Function we can use to sanitize the input data and return it when saving options
+ * 
+ * @since 1.0.0
+ * 
  */
 function pw_settings_sanitize( $input ) {
 	add_settings_error( 'pw-notices', '', '', '' );
@@ -122,6 +128,9 @@ function pw_settings_sanitize( $input ) {
 
 /*
  *  Default callback function if correct one does not exist
+ * 
+ * @since 1.0.0
+ * 
  */
 function pw_missing_callback( $args ) {
 	printf( __( 'The callback function used for the <strong>%s</strong> setting is missing.', 'pw' ), $args['id'] );
@@ -129,6 +138,11 @@ function pw_missing_callback( $args ) {
 
 /*
  * Function used to return an array of all of the plugin settings
+ * 
+ * @since 1.0.0
+ * 
+ * @return array
+ * 
  */
 function pw_get_settings() {
 	

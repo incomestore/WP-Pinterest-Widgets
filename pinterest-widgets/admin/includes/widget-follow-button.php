@@ -14,6 +14,12 @@ if ( ! defined( 'ABSPATH' ) )
 
 class PW_Follow_Button_Widget extends WP_Widget {
 	
+	/**
+	 * Create the new Pinterest Follow Button Widget in the admin
+	 *
+	 * @since     1.0.0
+	 *
+	 */
 	public function __construct() {
 		parent::__construct(
 			'pw_follow_button_widget',
@@ -23,9 +29,15 @@ class PW_Follow_Button_Widget extends WP_Widget {
 			)
 		);
 	}
-
+	
+	/**
+	 * Return public facing code for the Pinterest Follow Button Widget
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    string
+	 */
 	public function widget( $args, $instance ) {
-       // public facing widget code
 		
 		extract( $args );
 		
@@ -44,7 +56,14 @@ class PW_Follow_Button_Widget extends WP_Widget {
 		
 		echo $after_widget;
 	}
-
+	
+	/**
+	 * Save and return updated widget settings
+	 *
+	 * @since     1.0.0
+	 *
+	 * @return    array		new instance for the widget settings
+	 */
 	public function update( $new_instance, $old_instance ) {
 		$instance = $old_instance;
 		
@@ -55,7 +74,13 @@ class PW_Follow_Button_Widget extends WP_Widget {
         
 		return $instance;
 	}
-
+	
+	/**
+	 * Widget form output for Pinterest Follow Button Widget
+	 *
+	 * @since     1.0.0
+	 *
+	 */
 	public function form( $instance ) {
         // Widget form
 		
