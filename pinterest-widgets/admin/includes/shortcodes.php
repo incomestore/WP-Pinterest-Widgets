@@ -57,7 +57,7 @@ add_shortcode( 'pin_widget', 'pw_pin_widget' );
 function pw_board_widget( $attr ) {
 	
 	extract( shortcode_atts( array(
-					'url'          => '',
+					'url'          => 'http://www.pinterest.com/pinterest/pin-pets/',
 					'size'         => 'square',
 					'image_width'  => '',
 					'board_height' => '',

@@ -136,7 +136,7 @@
 					<td>url</td>
 					<td><?php _e( 'The Pinterest board URL you want to display', 'pw' ); ?></td>
 					<td>A Pinterest board URL</td>
-					<td>none</td>
+					<td>http://www.pinterest.com/pinterest/pin-pets/</td>
 				</tr>
 				<tr>
 					<td>size</td>
