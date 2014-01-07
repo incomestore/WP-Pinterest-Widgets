@@ -10,6 +10,6 @@ Includes:
 * Profile Widget
 * Board Widget
 
-The "Pin It" Button WordPress plugin includes a widget and is [found here](https://github.com/pderksen/WP-Pinterest-Pin-It-Button).
+A "Pin It" Button widget is *not* included in this plugin and instead included in the separate ["Pin It" Button plugin for WordPress](https://github.com/pderksen/WP-Pinterest-Pin-It-Button).
 
-Official Pinterest Widget Builder: http://business.pinterest.com/widget-builder/
+Embed code is taken from the [official Pinterest widget builder](http://business.pinterest.com/widget-builder/).
