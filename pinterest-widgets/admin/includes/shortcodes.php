@@ -40,7 +40,7 @@ add_shortcode( 'pin_follow', 'pw_follow_button' );
 function pw_pin_widget( $attr ) {
 	
 	extract( shortcode_atts( array(
-					'url'   => 'none'
+					'url'   => 'http://www.pinterest.com/pin/99360735500167749/'
 				), $attr ) );
 	
 	return '<div class="pw-wrap pw-shortcode">' . pw_pin_link( $url, '', 'embedPin' ) . '</div>';

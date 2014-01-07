@@ -99,7 +99,7 @@
 					<td>url</td>
 					<td><?php _e( 'The Pinterest pin URL you want to display', 'pw' ); ?></td>
 					<td>A Pinterest pin URL</td>
-					<td>none</td>
+					<td>http://www.pinterest.com/pin/99360735500167749/</td>
 				</tr>
 				</tbody>
 			</table>
