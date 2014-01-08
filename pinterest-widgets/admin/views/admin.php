@@ -10,8 +10,6 @@
 
 <div class="wrap">
 
-	
-
 	<div id="pw-settings">
 		<div id="pw-settings-content">
 			
@@ -27,9 +25,10 @@
 				?>
 			</form>
 			
-			<h2>Help</h2>
+			<h2><?php _e( 'Help', 'pw' ); ?></h2>
 			
 			<!-- Follow Button Shortcode Help -->
+
 			<h3 class="title"><?php _e( 'Pinterest Follow Button Shortcode', 'pw' ); ?></h3>
 
 			<p>
@@ -67,12 +66,14 @@
 				</tbody>
 			</table>
 			
-			<h4>Examples</h4>
+			<h4><?php _e( 'Examples', 'pw' ); ?></h4>
+
 			<ul class="ul-disc">
 				<li><code>[pin_follow username="pinterest" label="Click to Follow Pinterest!"]</code></li>
 			</ul>
 			
 			<!-- Pin Widget Shortcode Help -->
+
 			<h3 class="title"><?php _e( 'Pinterest Pin Widget Shortcode', 'pw' ); ?></h3>
 
 			<p>
@@ -104,12 +105,14 @@
 				</tbody>
 			</table>
 			
-			<h4>Examples</h4>
+			<h4><?php _e( 'Examples', 'pw' ); ?></h4>
+
 			<ul class="ul-disc">
 				<li><code>[pin_widget url="http://www.pinterest.com/pin/99360735500167749/"]</code></li>
 			</ul>
 			
 			<!-- Pin Board Widget Shortcode Help -->
+
 			<h3 class="title"><?php _e( 'Pinterest Board Widget Shortcode', 'pw' ); ?></h3>
 
 			<p>
@@ -146,7 +149,7 @@
 				</tr>
 				<tr>
 					<td colspan="4">
-						<strong>The following options only take effect when size is set to custom, otherwise they will be ignored</strong>
+						<strong><?php _e( 'The following options only take effect when size is set to custom, otherwise they will be ignored.', 'pw' ); ?></strong>
 					</td>
 				</tr>
 				<tr>
@@ -170,7 +173,8 @@
 				</tbody>
 			</table>
 			
-			<h4>Examples</h4>
+			<h4><?php _e( 'Examples', 'pw' ); ?></h4>
+
 			<ul class="ul-disc">
 				<li><code>[pin_board url="http://www.pinterest.com/pinterest/pin-pets/"]</code></li>
 				<li><code>[pin_board url="http://www.pinterest.com/pinterest/pin-pets/" size="header"]</code></li>
@@ -178,6 +182,7 @@
 			</ul>
 			
 			<!-- Profile Widget Shortcode Help -->
+
 			<h3 class="title"><?php _e( 'Pinterest Profile Widget Shortcode', 'pw' ); ?></h3>
 
 			<p>
@@ -214,7 +219,7 @@
 				</tr>
 				<tr>
 					<td colspan="4">
-						<strong>The following options only take effect when size is set to custom, otherwise they will be ignored</strong>
+						<strong><?php _e( 'The following options only take effect when size is set to custom, otherwise they will be ignored.', 'pw' ); ?></strong>
 					</td>
 				</tr>
 				<tr>
@@ -238,7 +243,8 @@
 				</tbody>
 			</table>
 			
-			<h4>Examples</h4>
+			<h4><?php _e( 'Examples', 'pw' ); ?></h4>
+
 			<ul class="ul-disc">
 				<li><code>[pin_profile username="pinterest"]</code></li>
 				<li><code>[pin_profile username="pinterest" size="sidebar"]</code></li>
