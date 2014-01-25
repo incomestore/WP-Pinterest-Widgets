@@ -51,7 +51,6 @@
 				<tr>
 					<th><?php _e( 'Attribute', 'pw' ); ?></th>
 					<th><?php _e( 'Description', 'pw' ); ?></th>
-					<th><?php _e( 'Choices', 'pw' ); ?></th>
 					<th><?php _e( 'Default', 'pw' ); ?></th>
 				</tr>
 				</thead>
@@ -59,13 +58,11 @@
 				<tr>
 					<td>username</td>
 					<td><?php _e( 'Your Pinterest username', 'pw' ); ?></td>
-					<td>A Pinterest username</td>
 					<td>pinterest</td>
 				</tr>
 				<tr>
 					<td>label</td>
 					<td><?php _e( 'The text for the button label', 'pw' ); ?></td>
-					<td>Any text</td>
 					<td>Follow me on Pinterest</td>
 				</tr>
 				</tbody>
@@ -96,7 +93,6 @@
 				<tr>
 					<th><?php _e( 'Attribute', 'pw' ); ?></th>
 					<th><?php _e( 'Description', 'pw' ); ?></th>
-					<th><?php _e( 'Choices', 'pw' ); ?></th>
 					<th><?php _e( 'Default', 'pw' ); ?></th>
 				</tr>
 				</thead>
@@ -104,7 +100,6 @@
 				<tr>
 					<td>url</td>
 					<td><?php _e( 'The Pinterest pin URL you want to display', 'pw' ); ?></td>
-					<td>A Pinterest pin URL</td>
 					<td>http://www.pinterest.com/pin/99360735500167749/</td>
 				</tr>
 				</tbody>
@@ -143,7 +138,7 @@
 				<tr>
 					<td>url</td>
 					<td><?php _e( 'The Pinterest board URL you want to display', 'pw' ); ?></td>
-					<td>A Pinterest board URL</td>
+					<td>Any Pinterest board URL</td>
 					<td>http://www.pinterest.com/pinterest/pin-pets/</td>
 				</tr>
 				<tr>
@@ -213,7 +208,7 @@
 				<tr>
 					<td>username</td>
 					<td><?php _e( 'The Pinterest username', 'pw' ); ?></td>
-					<td>A Pinterest username</td>
+					<td>Any Pinterest username</td>
 					<td>pinterest</td>
 				</tr>
 				<tr>
