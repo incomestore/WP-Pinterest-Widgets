@@ -10,7 +10,7 @@
  *
  * @wordpress-plugin
  * Plugin Name: Pinterest Widgets
- * TODO Plugin URI: http://pinterestplugin.com/pinterest-widgets-plugin/
+ * Plugin URI: http://pinterestplugin.com/pinterest-widgets-wordpress-plugin/
  * Description: Easily add a Pinterest Follow Button, Pin Widget, Board Widget and Profile Widget to your site. Includes shortcodes.
  * Version: 1.0.0
  * Author: Phil Derksen
