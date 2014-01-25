@@ -14,7 +14,12 @@
 		<div id="pw-settings-content">
 			
 			<h2><?php echo esc_html( get_admin_page_title() ); ?></h2>
-			
+
+			<p>
+				<?php _e( 'Go to Appearance', 'pw' ); ?> &rarr; <a href="<?php echo admin_url( 'widgets.php' ); ?>">Widgets</a>
+				<?php _e( 'to add Pinterest widgets to your sidebar and other widget areas.', 'pw' ); ?>
+			</p>
+
 			<form method="post" action="options.php">
 				<?php
 					// Show our settings before any help
