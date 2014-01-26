@@ -30,11 +30,11 @@
 				?>
 			</form>
 			
-			<h2><?php _e( 'Help', 'pw' ); ?></h2>
+			<h2><?php _e( 'Shortcode Help', 'pw' ); ?></h2>
 			
 			<!-- Follow Button Shortcode Help -->
 
-			<h3 class="title"><?php _e( 'Pinterest Follow Button Shortcode', 'pw' ); ?></h3>
+			<h3 class="title"><?php _e( 'Follow Button', 'pw' ); ?></h3>
 
 			<p>
 				<?php _e( 'Use the shortcode', 'pw' ); ?> <code>[pin_follow]</code> <?php _e( 'to display the Pinterest Follow Button within your content.', 'pw' ); ?>
@@ -76,7 +76,7 @@
 			
 			<!-- Pin Widget Shortcode Help -->
 
-			<h3 class="title"><?php _e( 'Pinterest Pin Widget Shortcode', 'pw' ); ?></h3>
+			<h3 class="title"><?php _e( 'Pin Widget', 'pw' ); ?></h3>
 
 			<p>
 				<?php _e( 'Use the shortcode', 'pw' ); ?> <code>[pin_widget]</code> <?php _e( 'to display the Pin Widget within your content.', 'pw' ); ?>
@@ -113,7 +113,7 @@
 			
 			<!-- Pin Board Widget Shortcode Help -->
 
-			<h3 class="title"><?php _e( 'Pinterest Board Widget Shortcode', 'pw' ); ?></h3>
+			<h3 class="title"><?php _e( 'Board Widget', 'pw' ); ?></h3>
 
 			<p>
 				<?php _e( 'Use the shortcode', 'pw' ); ?> <code>[pin_board]</code> <?php _e( 'to display the Board Widget within your content.', 'pw' ); ?>
@@ -183,7 +183,7 @@
 			
 			<!-- Profile Widget Shortcode Help -->
 
-			<h3 class="title"><?php _e( 'Pinterest Profile Widget Shortcode', 'pw' ); ?></h3>
+			<h3 class="title"><?php _e( 'Profile Widget', 'pw' ); ?></h3>
 
 			<p>
 				<?php _e( 'Use the shortcode', 'pw' ); ?> <code>[pin_profile]</code> <?php _e( 'to display the Profile Widget within your content.', 'pw' ); ?>
