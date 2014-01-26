@@ -13,7 +13,7 @@ Various widgets for Pinterest including the Follow Button, Pin Widget, Profile W
 
 Add simple Pinterest widgets to your site in minutes. Widgets behave and appear like those from the [official Pinterest widget builder](http://business.pinterest.com/widget-builder/).
 
-Brought to you by the creators of the [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/)).
+Brought to you by the creators of the [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)).
 
 Includes:
 
@@ -22,7 +22,7 @@ Includes:
 * Profile widget: Show up to 30 of your latest Pins on your site.
 * Board widget: Show up to 30 of your favorite board’s latest Pins.
 
-The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/)).
+The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)).
 
 == Installation ==
 
