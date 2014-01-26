@@ -60,7 +60,14 @@ Shortcode help available within the plugin admin.
 
 == Screenshots ==
 
-
+1. Follow button display
+2. Pin widget display
+3. Profile widget display ("header" size)
+4. Board widget display (custom size: 200 width by 350 height)
+5. Follow button widget settings
+6. Pin widget settings
+7. Profile widget settings
+8. Board widget settings
 
 == Changelog ==
 
