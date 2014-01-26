@@ -87,3 +87,53 @@ function pw_widget_boards( $url, $label, $size, $custom_sizes, $action ) {
 	return $widget;
 }
 
+/**
+ * Render RSS items from pinterestplugin.com in unordered list.
+ * http://codex.wordpress.org/Function_Reference/fetch_feed
+ * Based on pib_rss_news() in Pin it button plugin.
+ *
+ * @since   1.0.0
+ */
+
+function pw_rss_news() {
+	// Get RSS Feed(s).
+	include_once( ABSPATH . WPINC . '/feed.php' );
+
+	// Get a SimplePie feed object from the specified feed source.
+	$rss = fetch_feed( 'http://pinterestplugin.com/feed/' );
+
+	if ( ! is_wp_error( $rss ) ) {
+		// Checks that the object is created correctly.
+		// Figure out how many total items there are, but limit it to 5.
+		$maxitems = $rss->get_item_quantity( 3 );
+
+		// Build an array of all the items, starting with element 0 (first element).
+		$rss_items = $rss->get_items( 0, $maxitems );
+	}
+	?>
+
+	<ul>
+		<?php if ($maxitems == 0): ?>
+			<li><?php _e( 'No items.', 'ps' ); ?></li>
+		<?php else: ?>
+			<?php
+			// Loop through each feed item and display each item as a hyperlink.
+			foreach ( $rss_items as $item ): ?>
+				<?php $post_url = add_query_arg( array(
+
+					// Google Analytics campaign URL
+					'utm_source'   => 'pinterest_widgets',
+					'utm_medium'   => 'sidebar_link',
+					'utm_campaign' => 'blog_post_link'
+
+				), esc_url( $item->get_permalink() ) ); ?>
+
+				<li>
+					&raquo; <a href="<?php echo $post_url; ?>" target="_blank" class="pw-external-link"><?php echo esc_html( $item->get_title() ); ?></a>
+				</li>
+			<?php endforeach; ?>
+		<?php endif; ?>
+	</ul>
+
+<?php
+}
