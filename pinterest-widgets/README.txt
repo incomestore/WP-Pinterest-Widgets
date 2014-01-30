@@ -1,17 +1,17 @@
 === Pinterest Widgets ===
 Contributors: pderksen, nickyoung87
-Tags: pinterest, pinterest, widgets, follow button, pin widget, board widget, profile widget, social, social media, image, images, photo, photos, social button
+Tags: pinterest, widgets, follow button, pin widget, board widget, profile widget, social, social media, image, images, photo, photos, social button
 Requires at least: 3.5.2
 Tested up to: 3.8
 Stable tag: trunk
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Various widgets for Pinterest including the Follow Button, Pin Widget, Profile Widget and Board Widget.
+Various widgets for Pinterest including the Follow button, Pin widget, Profile widget and Board Widget. Includes shortcodes.
 
 == Description ==
 
-Add simple Pinterest widgets to your site in no time. Behavior and appearance taken from the [official Pinterest widget builder](http://business.pinterest.com/widget-builder/).
+Add simple Pinterest widgets to your site in minutes. Widgets behave and appear like those from the [official Pinterest widget builder](http://business.pinterest.com/widget-builder/).
 
 Includes:
 
@@ -19,8 +19,9 @@ Includes:
 * Pin widget: Embed one of your Pins on your site.
 * Profile widget: Show up to 30 of your latest Pins on your site.
 * Board widget: Show up to 30 of your favorite board’s latest Pins.
+* Shortcodes for all 4 widgets.
 
-A "Pin It" Button widget is *not* included in this plugin and is instead included in the separate ["Pin It" Button plugin](http://wordpress.org/plugins/pinterest-pin-it-button/).
+The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)), which we also created.
 
 == Installation ==
 
@@ -44,7 +45,7 @@ A "Pin It" Button widget is *not* included in this plugin and is instead include
 = 3. FTP Upload =
 1. Download the plugin (.zip file) on the right column of this page.
 1. Unzip the zip file contents.
-1. Upload the `pinterest-pin-it-button` folder to the `/wp-content/plugins/` directory of your site.
+1. Upload the `pinterest-widgets` folder to the `/wp-content/plugins/` directory of your site.
 1. Activate the plugin through the 'Plugins' menu in WordPress.
 1. Go to Appearance > Widgets to add widgets to your site.
 
@@ -52,13 +53,23 @@ A "Pin It" Button widget is *not* included in this plugin and is instead include
 
 = General Troubleshooting =
 
+Your theme must implement **wp_footer()** in the footer.php file, otherwise JavaScript will not load correctly. You can test if this is the issue by switching to a WordPress stock theme such as twenty-twelve temporarily.
 
+Shortcode help available within the plugin admin.
 
 == Screenshots ==
 
-
+1. Follow button display
+2. Pin widget display
+3. Profile widget display ("header" size)
+4. Board widget display (custom size: 200 width by 350 height)
+5. Follow button widget settings
+6. Pin widget settings
+7. Profile widget settings
+8. Board widget settings
 
 == Changelog ==
 
 = 1.0.0 =
+
 * Initial release

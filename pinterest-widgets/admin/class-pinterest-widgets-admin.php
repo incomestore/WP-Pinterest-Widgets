@@ -38,6 +38,9 @@ class Pinterest_Widgets_Admin {
 		$plugin = Pinterest_Widgets::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
 
+		// Load admin style sheets.
+		add_action( 'admin_enqueue_scripts', array( $this, 'enqueue_admin_styles' ) );
+
 		// Add the options page and menu item.
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
 
@@ -104,14 +107,37 @@ class Pinterest_Widgets_Admin {
 	}
 
 	/**
+	 * Register and enqueue admin-specific style sheet.
+	 *
+	 * @since     1.0.0
+	 */
+	public function enqueue_admin_styles() {
+
+		if ( ! isset( $this->plugin_screen_hook_suffix ) ) {
+			return;
+		}
+
+		$screen = get_current_screen();
+
+		if ( $this->plugin_screen_hook_suffix == $screen->id ) {
+			// Plugin admin custom Bootstrap CSS. Tack on plugin version.
+			wp_enqueue_style( $this->plugin_slug .'-bootstrap', plugins_url( 'assets/css/bootstrap-custom.css', __FILE__ ), array(), Pinterest_Widgets::VERSION );
+
+			// Plugin admin custom Flat UI CSS. Tack on plugin version.
+			wp_enqueue_style( $this->plugin_slug .'-flat-ui', plugins_url( 'assets/css/flat-ui-custom.css', __FILE__ ), array( $this->plugin_slug .'-bootstrap' ), Pinterest_Widgets::VERSION );
+
+			// Plugin admin CSS. Tack on plugin version.
+			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array( $this->plugin_slug .'-flat-ui' ), Pinterest_Widgets::VERSION );
+		}
+	}
+
+	/**
 	 * Register the administration menu for this plugin into the WordPress Dashboard menu.
 	 *
 	 * @since    1.0.0
 	 */
 	public function add_plugin_admin_menu() {
-		
-		// Add settings & help page to the WordPress Settings menu
-		$this->plugin_screen_hook_suffix[] = add_submenu_page(
+		$this->plugin_screen_hook_suffix = add_submenu_page(
 			'options-general.php',
 			$this->get_plugin_title() . __( ' Settings', 'pw' ),
 			__( 'Pinterest Widgets', 'pw' ),
@@ -119,7 +145,15 @@ class Pinterest_Widgets_Admin {
 			$this->plugin_slug,
 			array( $this, 'display_plugin_admin_page' )
 		);
-
+		/*
+		$this->plugin_screen_hook_suffix = add_options_page(
+			__( 'Page Title', $this->plugin_slug ),
+			__( 'Menu Text', $this->plugin_slug ),
+			'manage_options',
+			$this->plugin_slug,
+			array( $this, 'display_plugin_admin_page' )
+		);
+		*/
 	}
 
 	/**
