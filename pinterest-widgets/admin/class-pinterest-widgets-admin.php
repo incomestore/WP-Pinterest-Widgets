@@ -50,7 +50,12 @@ class Pinterest_Widgets_Admin {
 
 	}
 	
-	// Load files that are needed
+	/**
+	 * Include all necessary files
+	 *
+	 * @since     1.0.0
+	 *
+	 */
 	public function includes() {
 		// Setup global options and load plugin settings
 		global $pw_options;
@@ -142,7 +147,12 @@ class Pinterest_Widgets_Admin {
 
 	}
 	
-	// Return the plugin title
+	/**
+	 * Get the plugin title
+	 *
+	 * @since     1.0.0
+	 *
+	 */
 	function get_plugin_title() {
 		return __( 'Pinterest Widgets', 'pw' );
 	}

@@ -13,12 +13,12 @@ if ( ! defined( 'ABSPATH' ) )
 	exit;
 
 /**
-	 * Process and return shortcode for Pinterest Follow Button
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    string
-	 */
+ * Process and return shortcode for Pinterest Follow Button
+ *
+ * @since     1.0.0
+ *
+ * @return    string
+ */
 function pw_follow_button( $attr ) {
 	
 	extract( shortcode_atts( array(
@@ -31,12 +31,12 @@ function pw_follow_button( $attr ) {
 add_shortcode( 'pin_follow', 'pw_follow_button' );
 
 /**
-	 * Process and return shortcode for Pinterest Pin Widget
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    string
-	 */
+ * Process and return shortcode for Pinterest Pin Widget
+ *
+ * @since     1.0.0
+ *
+ * @return    string
+ */
 function pw_pin_widget( $attr ) {
 	
 	extract( shortcode_atts( array(
@@ -48,12 +48,12 @@ function pw_pin_widget( $attr ) {
 add_shortcode( 'pin_widget', 'pw_pin_widget' );
 
 /**
-	 * Process and return shortcode for Pinterest Board Widget
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    string
-	 */
+ * Process and return shortcode for Pinterest Board Widget
+ *
+ * @since     1.0.0
+ *
+ * @return    string
+ */
 function pw_board_widget( $attr ) {
 	
 	extract( shortcode_atts( array(
@@ -79,12 +79,12 @@ function pw_board_widget( $attr ) {
 add_shortcode( 'pin_board', 'pw_board_widget' );
 
 /**
-	 * Process and return shortcode for Pinterest Profile Widget
-	 *
-	 * @since     1.0.0
-	 *
-	 * @return    string
-	 */
+ * Process and return shortcode for Pinterest Profile Widget
+ *
+ * @since     1.0.0
+ *
+ * @return    string
+ */
 function pw_profile_widget( $attr ) {
 	
 	extract( shortcode_atts( array(

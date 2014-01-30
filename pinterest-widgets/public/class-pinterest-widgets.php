@@ -59,7 +59,12 @@ class Pinterest_Widgets {
 		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
 	}
 	
-	
+	/**
+	 * Enqueue necessary scripts
+	 *
+	 * @since     1.0.0
+	 *
+	*/
 	public function enqueue_scripts() {
 		
 		global $pw_options;
@@ -69,6 +74,7 @@ class Pinterest_Widgets {
 		if( empty( $pw_options['no_pinit_js'] ) )
 			wp_enqueue_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), null, true );
 	}
+	
 	/**
 	 * Return the plugin slug.
 	 *
