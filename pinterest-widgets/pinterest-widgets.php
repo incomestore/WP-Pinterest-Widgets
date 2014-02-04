@@ -39,3 +39,5 @@ require_once( plugin_dir_path( __FILE__ ) . 'public/class-pinterest-widgets.php'
 // Get instance of our plugin
 add_action( 'plugins_loaded', array( 'Pinterest_Widgets', 'get_instance' ) );
 
+define( 'PW_MAIN_FILE', __FILE__ );
+
