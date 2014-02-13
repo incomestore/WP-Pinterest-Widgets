@@ -1,5 +1,5 @@
 Pinterest Widgets for WordPress
-===============================
+===
 
 A WordPress plugin containing various Pinterest widgets from the official Widget Builder (except the ["Pin It" button](https://github.com/pderksen/WP-Pinterest-Pin-It-Button)).
 
