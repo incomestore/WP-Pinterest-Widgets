@@ -23,6 +23,8 @@ Includes:
 
 The "Pin It" Button widget is *not* included in this plugin and is instead included in the separate [Pinterest "Pin It" Button plugin](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets) ([Lite version](http://wordpress.org/plugins/pinterest-pin-it-button/) / [Pro version](http://pinterestplugin.com/pin-it-button-pro/?utm_source=wordpress_org&utm_medium=link&utm_campaign=pinterest_widgets)), which we also created.
 
+[Follow this project on Github](https://github.com/pderksen/WP-Pinterest-Widgets).
+
 == Installation ==
 
 = 1. Admin Search =
