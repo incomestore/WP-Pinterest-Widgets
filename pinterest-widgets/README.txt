@@ -72,6 +72,10 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
+= 1.0.1 =
+
+* Added action and filter hooks for extensibility.
+
 = 1.0.0 =
 
 * Initial release
