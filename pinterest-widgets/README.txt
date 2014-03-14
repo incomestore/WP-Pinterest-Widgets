@@ -59,6 +59,8 @@ Your theme must implement **wp_footer()** in the footer.php file, otherwise Java
 
 Shortcode help available within the plugin admin.
 
+[Follow this project on Github](https://github.com/pderksen/WP-Pinterest-Widgets).
+
 == Screenshots ==
 
 1. Follow button display
