@@ -1,4 +1,5 @@
 <?php
+
 /**
  * Pinterest Widgets
  *
@@ -17,27 +18,24 @@
  * Author URI: http://philderksen.com
  * License: GPL-2.0+
  * License URI: http://www.gnu.org/licenses/gpl-2.0.txt
+ * GitHub Plugin URI: https://github.com/pderksen/WP-Pinterest-Widgets
  */
 
-// If this file is called directly, abort.
-if ( ! defined( 'WPINC' ) ) {
-	die;
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
 }
 
-/*----------------------------------------------------------------------------*
- * Public-Facing Functionality
- *----------------------------------------------------------------------------*/
+if ( ! defined( 'PW_MAIN_FILE' ) ) {
+	define ( 'PW_MAIN_FILE', __FILE__ );
+}
 
 // Admin class included here because widgets need both admin and public side so we need this here until we come up with a better solution
 require_once( plugin_dir_path( __FILE__ ) . 'admin/class-pinterest-widgets-admin.php' );
 	
 add_action( 'plugins_loaded', array( 'Pinterest_Widgets_Admin', 'get_instance' ) );
 
-
 require_once( plugin_dir_path( __FILE__ ) . 'public/class-pinterest-widgets.php' );
 
 // Get instance of our plugin
 add_action( 'plugins_loaded', array( 'Pinterest_Widgets', 'get_instance' ) );
-
-define( 'PW_MAIN_FILE', __FILE__ );
-
