@@ -250,11 +250,11 @@
 				<li><code>[pin_profile username="pinterest" size="custom" image_width="125" board_width="1200" board_height="600"]</code></li>
 			</ul>
 
-		</div>
+		</div><!-- #sc-settings-content -->
 
 		<div id="pw-settings-sidebar">
 			<?php include( 'admin-sidebar.php' ); ?>
 		</div>
 
 	</div>
-</div>
+</div><!-- .wrap -->
