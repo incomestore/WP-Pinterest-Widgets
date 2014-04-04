@@ -9,8 +9,9 @@
  */
 
 // Exit if accessed directly.
-if ( ! defined( 'ABSPATH' ) )
+if ( ! defined( 'ABSPATH' ) ) {
 	exit;
+}
 ?>
 
 <?php if ( ! pw_is_pib_pro_active() ): // If "Pin It" Button Pro is already active don't show. ?>

@@ -6,6 +6,11 @@
  * @subpackage admin
  * @author     Phil Derksen <pderksen@gmail.com>, Nick Young <mycorpweb@gmail.com>
  */
+// Exit if accessed directly.
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
 
 class Pinterest_Widgets_Admin {
 
