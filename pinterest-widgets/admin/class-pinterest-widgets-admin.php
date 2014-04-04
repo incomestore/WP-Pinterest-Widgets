@@ -34,6 +34,8 @@ class Pinterest_Widgets_Admin {
 	 * @since     1.0.0
 	 */
 	private function __construct() {
+		
+		$this->setup_constants();
 
 		$plugin = Pinterest_Widgets::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
@@ -53,6 +55,12 @@ class Pinterest_Widgets_Admin {
 		
 		// Check WP version
 		add_action( 'admin_init', array( $this, 'check_wp_version' ) );
+	}
+	
+	public function setup_constants() {
+		if( ! defined( 'PINPLUGIN_BASE_URL' ) ) {
+			define( 'PINPLUGIN_BASE_URL', 'http://pinplugins.com/' );
+		}
 	}
 	
 	/**
