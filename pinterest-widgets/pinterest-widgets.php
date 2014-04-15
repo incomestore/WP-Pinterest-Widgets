@@ -32,8 +32,13 @@ if ( ! defined( 'PW_MAIN_FILE' ) ) {
 
 // Admin class included here because widgets need both admin and public side so we need this here until we come up with a better solution
 require_once( plugin_dir_path( __FILE__ ) . 'admin/class-pinterest-widgets-admin.php' );
-	
+
+// Register hooks that are fired when the plugin is activated, deactivated, and uninstalled, respectively.
+register_activation_hook( __FILE__, array( 'Pinterest_Widgets_Admin', 'activate' ) );
+
+// Get admin instance
 add_action( 'plugins_loaded', array( 'Pinterest_Widgets_Admin', 'get_instance' ) );
+
 
 require_once( plugin_dir_path( __FILE__ ) . 'public/class-pinterest-widgets.php' );
 
