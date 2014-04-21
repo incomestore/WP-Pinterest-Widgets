@@ -74,6 +74,10 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
+= 1.0.2 =
+
+* Updated code to only include JS and CSS if there is a widget/shortcode on the page.
+
 = 1.0.1 =
 
 * Added action and filter hooks for extensibility.
