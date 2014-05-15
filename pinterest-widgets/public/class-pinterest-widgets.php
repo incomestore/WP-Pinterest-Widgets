@@ -90,6 +90,10 @@ class Pinterest_Widgets {
 			$loadJS = true;
 		}
 		
+		if( wp_script_is( 'pib-async-script-loader', 'enqueued' ) ) {
+			$loadJS = false;
+		}
+		
 		if( $loadJS ) {
 			// Enqueue pinit.js
 			if( empty( $pw_options['no_pinit_js'] ) ) {
