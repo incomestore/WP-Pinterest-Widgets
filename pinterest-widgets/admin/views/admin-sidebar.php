@@ -25,14 +25,14 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</p>
 
 		<ul>
-			<li><i class="fui-check"></i> <?php _e( 'Add "Pin It" buttons on image hover', 'pw' ); ?></li>
-			<li><i class="fui-check"></i> <?php _e( 'Add "Pin It" buttons under images', 'pw' ); ?></li>
-			<li><i class="fui-check"></i> <?php _e( '30 custom "Pin It" button designs', 'pw' ); ?></li>
-			<li><i class="fui-check"></i> <?php _e( 'Upload your own button designs', 'pw' ); ?></li>
-			<li><i class="fui-check"></i> <?php _e( 'Twitter, Facebook & G+ buttons', 'pw' ); ?></li>
-			<li><i class="fui-check"></i> <?php _e( 'Use with featured images', 'pw' ); ?></li>
-			<li><i class="fui-check"></i> <?php _e( 'Use with custom post types', 'pw' ); ?></li>
-			<li><i class="fui-check"></i> <?php _e( 'Customer support & auto updates', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Add "Pin It" buttons on image hover', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Add "Pin It" buttons under images', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( '30 custom "Pin It" button designs', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Upload your own button designs', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Twitter, Facebook & G+ buttons', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Use with featured images', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Use with custom post types', 'pw' ); ?></li>
+			<li><div class="dashicons dashicons-yes"></div> <?php _e( 'Customer support & auto updates', 'pw' ); ?></li>
 		</ul>
 
 		<p class="last-blurb">
@@ -62,7 +62,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	<div class="sidebar-content">
 		<ul>
 			<li>
-				<i class="fui-arrow-right"></i>
+				<div class="dashicons dashicons-arrow-right-alt2"></div>
 				<a href="http://wordpress.org/support/plugin/pinterest-widgets" target="_blank">
 					<?php _e( 'Community Support Forums', 'pw' ); ?></a>
 			</li>
