@@ -40,7 +40,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 		</p>
 
 		<a href="<?php echo PINPLUGIN_BASE_URL; ?>pin-it-button-pro/?utm_source=pinterest_widgets&utm_medium=sidebar_link&utm_campaign=pro_upgrade"
-		   class="btn btn-large btn-block btn-danger" target="_blank">
+					class="button-primary" target="_blank">
 			<?php _e( 'Get "Pin It" Pro Now', 'pw' ); ?></a>
 	</div>
 </div>
@@ -53,7 +53,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 			<?php _e( 'Help us get noticed (and boost our egos) with a rating and short review.', 'pw' ); ?>
 		</p>
 
-		<a href="http://wordpress.org/support/view/plugin-reviews/pinterest-widgets" class="btn btn-small btn-block btn-inverse" target="_blank">
+		<a href="http://wordpress.org/support/view/plugin-reviews/pinterest-widgets" class="button-primary" target="_blank">
 			<?php _e( 'Rate this plugin on WordPress.org', 'pw' ); ?></a>
 	</div>
 </div>
