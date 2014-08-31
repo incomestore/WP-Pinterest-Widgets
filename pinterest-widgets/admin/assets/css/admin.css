@@ -1,10 +1,5 @@
 /* This stylesheet is used to style the admin option form of the plugin. */
 
-a.pw-external-link {
-	background: transparent url('../assets/icon-external-link.gif') center right no-repeat;
-	padding-right: 17px;
-}
-
 /* Layout the page similar to the built-in post edit screen. */
 
 #pw-settings {
