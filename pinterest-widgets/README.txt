@@ -78,7 +78,7 @@ Shortcode help available within the plugin admin.
 
 = 1.0.4 =
 
-* Tested with WordPress 4.0
+* Tested with WordPress 4.0.
 
 = 1.0.3 =
 
@@ -95,4 +95,4 @@ Shortcode help available within the plugin admin.
 
 = 1.0.0 =
 
-* Initial release
+* Initial release.
