@@ -76,6 +76,10 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
+= 1.0.5 = 
+
+* Simplified text domain function.
+
 = 1.0.4 =
 
 * Tested with WordPress 4.0.
