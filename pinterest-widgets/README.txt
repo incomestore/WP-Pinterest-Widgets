@@ -78,12 +78,12 @@ Shortcode help available within the plugin admin.
 
 = 1.0.5 = 
 
-* Tested with WordPress 4.1.
+* Tested up to WordPress 4.1.
 * Simplified text domain function.
 
 = 1.0.4 =
 
-* Tested with WordPress 4.0.
+* Tested up to WordPress 4.0.
 
 = 1.0.3 =
 
