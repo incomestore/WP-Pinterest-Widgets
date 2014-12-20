@@ -123,7 +123,7 @@ class Pinterest_Widgets_Admin {
 	 */
 	public function check_wp_version() {
 		global $wp_version;
-		$required_wp_version = '3.5.2';
+		$required_wp_version = '3.8.5';
 		
 		if ( version_compare( $wp_version, $required_wp_version, '<' ) ) {
 			deactivate_plugins( PW_MAIN_FILE ); 
