@@ -60,7 +60,8 @@ class Pinterest_Widgets_Admin {
 		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
 		
 		// Make sure we load our include files
-		add_action( 'init', array( $this, 'includes' ), 0 );
+		//add_action( 'init', array( $this, 'includes' ), 0 );
+		$this->includes();
 		
 		// Check WP version
 		add_action( 'admin_init', array( $this, 'check_wp_version' ) );
@@ -141,6 +142,8 @@ class Pinterest_Widgets_Admin {
 	public function includes() {
 		// Setup global options and load plugin settings
 		global $pw_options;
+		
+		echo 'TEST #4<br>';
 		
 		include_once( 'includes/register-settings.php' );
 		

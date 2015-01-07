@@ -29,6 +29,12 @@ class PW_Board_Widget extends WP_Widget {
 				'description'	=>	__( 'Add a Pinterest Board Widget to any widget area.', 'pw' )
 			)
 		);
+		
+		if ( is_active_widget( false, false, $this->id_base ) ) {
+			// Load JS
+			echo 'TEST #3<br>';
+			wp_enqueue_script( 'pinterest-pinit-js' );
+		}
 	}
 	
 	/**
