@@ -61,7 +61,7 @@ class Pinterest_Widgets {
 		add_action( 'wpmu_new_blog', array( $this, 'activate_new_site' ) );
 		
 		// Add public scripts
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts' ) );
+		add_action( 'init', array( $this, 'enqueue_scripts' ) );
 		
 		// Load scripts when posts load so we know if we need to include them or not
 		add_filter( 'the_posts', array( $this, 'load_scripts' ), 20 );
@@ -72,7 +72,7 @@ class Pinterest_Widgets {
 		if ( empty( $posts ) ) {
 			return $posts;
 		}
-echo 'TEST #2<br>';
+		
 		foreach ( $posts as $post ) {
 			if ( strpos( $post->post_content, '[pin_follow' ) !== false || 
 				strpos( $post->post_content, '[pin_widget' ) !== false || 
@@ -95,7 +95,6 @@ echo 'TEST #2<br>';
 	 *
 	*/
 	public function enqueue_scripts() {
-		echo 'TEST #1<br>';
 		//if( ! wp_script_is( 'pib-async-script-loader', 'enqueued' ) ) {
 			wp_register_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), null, true );
 		//}

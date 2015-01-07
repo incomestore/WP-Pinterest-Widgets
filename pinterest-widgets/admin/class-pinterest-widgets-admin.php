@@ -143,8 +143,6 @@ class Pinterest_Widgets_Admin {
 		// Setup global options and load plugin settings
 		global $pw_options;
 		
-		echo 'TEST #4<br>';
-		
 		include_once( 'includes/register-settings.php' );
 		
 		$pw_options = pw_get_settings();
