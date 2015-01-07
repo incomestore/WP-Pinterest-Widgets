@@ -64,7 +64,7 @@ class Pinterest_Widgets {
 		add_action( 'init', array( $this, 'enqueue_scripts' ) );
 		
 		// Load scripts when posts load so we know if we need to include them or not
-		add_filter( 'the_posts', array( $this, 'load_scripts' ), 20 );
+		add_filter( 'the_posts', array( $this, 'load_scripts' ) );
 	}
 	
 	function load_scripts( $posts ) {
@@ -96,7 +96,7 @@ class Pinterest_Widgets {
 	*/
 	public function enqueue_scripts() {
 		//if( ! wp_script_is( 'pib-async-script-loader', 'enqueued' ) ) {
-			wp_register_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), null, true );
+			wp_register_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), self::VERSION, true );
 		//}
 	}
 	
