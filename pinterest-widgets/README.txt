@@ -76,7 +76,11 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
-= 1.0.5 = 
+= 1.0.6 =
+
+* Scripts and styles now only enqueued on posts and pages where required.
+
+= 1.0.5 =
 
 * Tested up to WordPress 4.1.
 * Simplified text domain function.
