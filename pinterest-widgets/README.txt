@@ -76,9 +76,9 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
-= 1.0.6 =
+= 1.0.6 - TODO =
 
-* Scripts and styles now only enqueued on posts and pages where required.
+* TODO Added option to always enqueue scripts & styles (enabled by default).
 * Tested up to WordPress 4.2.
 
 = 1.0.5 =
