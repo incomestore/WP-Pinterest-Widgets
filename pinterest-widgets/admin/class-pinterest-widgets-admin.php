@@ -40,10 +40,22 @@ class Pinterest_Widgets_Admin {
 	 */
 	private function __construct() {
 		
-		$this->setup_constants();
-
 		$plugin = Pinterest_Widgets::get_instance();
 		$this->plugin_slug = $plugin->get_plugin_slug();
+		
+		$old = get_option( 'pw_version' );
+		
+		if( version_compare( $old, $plugin::VERSION, '<' ) ) {
+			delete_option( 'pw_upgrade_has_run' );
+		}
+		
+		if( false === get_option( 'pw_upgrade_has_run' ) ) {
+			$this->upgrade();
+		}
+		
+		$this->setup_constants();
+
+		
 		
 		// Load the plugin text domain for translations
 		//add_action( 'plugins_loaded', array( $this, 'plugin_textdomain' ) );
@@ -68,6 +80,10 @@ class Pinterest_Widgets_Admin {
 		
 		// Add admin notice after plugin activation. Also check if should be hidden.
 		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
+	}
+	
+	public function upgrade() {
+		include_once( PW_DIR_PATH . 'admin/includes/upgrade.php' );
 	}
 	
 	/**

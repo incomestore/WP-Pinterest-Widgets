@@ -32,6 +32,11 @@ if ( ! defined( 'PW_MAIN_FILE' ) ) {
 	define ( 'PW_MAIN_FILE', __FILE__ );
 }
 
+
+if ( ! defined( 'PW_DIR_PATH' ) ) {
+	define( 'PW_DIR_PATH', plugin_dir_path( __FILE__ ) );
+}
+
 // Admin class included here because widgets need both admin and public side so we need this here until we come up with a better solution
 require_once( plugin_dir_path( __FILE__ ) . 'admin/class-pinterest-widgets-admin.php' );
 
