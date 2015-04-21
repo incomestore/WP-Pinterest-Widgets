@@ -76,9 +76,10 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
-= 1.0.6 - TODO =
+= 1.0.6 - April 21, 2015 =
 
-* TODO Added option to always enqueue scripts & styles (enabled by default).
+* Updated calls to add_query_arg to prevent any possible XSS attacks.
+* Added option to always enqueue scripts & styles (enabled by default).
 * Tested up to WordPress 4.2.
 
 = 1.0.5 =
