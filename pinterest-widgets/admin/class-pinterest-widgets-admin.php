@@ -53,6 +53,8 @@ class Pinterest_Widgets_Admin {
 			$this->upgrade();
 		}
 		
+		update_option( 'pw_version', $plugin::VERSION );
+		
 		$this->setup_constants();
 
 		
