@@ -112,7 +112,7 @@ class Pinterest_Widgets_Admin {
 	}
 	
 	public function setup_constants() {
-		if( ! defined( 'PINPLUGIN_BASE_URL' ) ) {
+		if ( ! defined( 'PINPLUGIN_BASE_URL' ) ) {
 			define( 'PINPLUGIN_BASE_URL', 'http://pinplugins.com/' );
 		}
 	}
