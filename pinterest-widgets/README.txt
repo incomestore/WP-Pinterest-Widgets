@@ -76,7 +76,7 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
-= 1.0.6 - April 21, 2015 =
+= 1.0.6 - April 22, 2015 =
 
 * Updated calls to add_query_arg to prevent any possible XSS attacks.
 * Added option to always enqueue scripts & styles (enabled by default).
