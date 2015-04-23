@@ -78,7 +78,7 @@ class Pinterest_Widgets_Admin {
 		add_action( 'admin_init', array( $this, 'check_wp_version' ) );
 
 		// Add plugin listing "Settings" action link.
-		add_filter( 'plugin_action_links_' . plugin_basename( plugin_dir_path( __FILE__ ) . $this->plugin_slug . '.php' ), array( $this, 'settings_link' ) );
+		add_filter( 'plugin_action_links_' . plugin_basename( plugin_dir_path( PW_MAIN_FILE ) . $this->plugin_slug . '.php' ), array( $this, 'settings_link' ) );
 
 		// Add admin notice after plugin activation. Also check if should be hidden.
 		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
