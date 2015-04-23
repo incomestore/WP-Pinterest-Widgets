@@ -21,7 +21,7 @@ class Pinterest_Widgets {
 	 *
 	 * @var     string
 	 */
-	protected static $version = '1.0.6.1';
+	protected static $version = '1.0.6.2';
 
 	/**
 	 * Unique identifier for this plugin.
