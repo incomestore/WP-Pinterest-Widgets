@@ -71,17 +71,15 @@ class Pinterest_Widgets_Admin {
 		// Add the options page and menu item.
 		add_action( 'admin_menu', array( $this, 'add_plugin_admin_menu' ) );
 
-		// Add an action link pointing to the options page.
-		$plugin_basename = plugin_basename( plugin_dir_path( __FILE__ ) . $this->plugin_slug . '.php' );
-		add_filter( 'plugin_action_links_' . $plugin_basename, array( $this, 'add_action_links' ) );
-		
 		// Make sure we load our include files
-		//add_action( 'init', array( $this, 'includes' ), 0 );
 		$this->includes();
 		
 		// Check WP version
 		add_action( 'admin_init', array( $this, 'check_wp_version' ) );
-		
+
+		// Add plugin listing "Settings" action link.
+		add_filter( 'plugin_action_links_' . plugin_basename( plugin_dir_path( __FILE__ ) . $this->plugin_slug . '.php' ), array( $this, 'settings_link' ) );
+
 		// Add admin notice after plugin activation. Also check if should be hidden.
 		add_action( 'admin_notices', array( $this, 'admin_install_notice' ) );
 	}
@@ -251,19 +249,16 @@ class Pinterest_Widgets_Admin {
 	}
 
 	/**
-	 * Add settings action link to the plugins page.
+	 * Add Settings action link to left of existing action links on plugin listing page.
 	 *
 	 * @since    1.0.0
 	 */
-	public function add_action_links( $links ) {
+	public function settings_link( $links ) {
 
-		return array_merge(
-			array(
-				'settings' => '<a href="' . admin_url( 'options-general.php?page=' . $this->plugin_slug ) . '">' . __( 'Settings', $this->plugin_slug ) . '</a>'
-			),
-			$links
-		);
+		$setting_link = sprintf( '<a href="%s">%s</a>', esc_url( add_query_arg( 'page', $this->plugin_slug, admin_url( 'options-general.php' ) ) ), __( 'Settings', 'pw' ) );
+		array_unshift( $links, $setting_link );
 
+		return $links;
 	}
 	
 	/**
