@@ -14,6 +14,10 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 class Pinterest_Widgets_Admin {
 
+	// Version & plugin slug set from main class in contructor.
+	protected $version = null;
+	protected $plugin_slug = null;
+
 	/**
 	 * Instance of this class.
 	 *
@@ -39,13 +43,17 @@ class Pinterest_Widgets_Admin {
 	 * @since     1.0.0
 	 */
 	private function __construct() {
-		
-		$plugin = Pinterest_Widgets::get_instance();
-		$this->plugin_slug = $plugin->get_plugin_slug();
-		
+
+		// Set version & plugin slug from main class.
+		$this->plugin_version = Pinterest_Widgets::get_plugin_version();
+		$this->plugin_slug = Pinterest_Widgets::get_plugin_slug();
+
+		var_dump('$this->plugin_version' . $this->plugin_version);
+		var_dump('$this->plugin_slug' . $this->plugin_slug);
+
 		$old = get_option( 'pw_version' );
 		
-		if( version_compare( $old, $plugin->get_plugin_version(), '<' ) ) {
+		if( version_compare( $old, $this->plugin_version, '<' ) ) {
 			delete_option( 'pw_upgrade_has_run' );
 		}
 		
@@ -53,7 +61,7 @@ class Pinterest_Widgets_Admin {
 			$this->upgrade();
 		}
 		
-		update_option( 'pw_version', $plugin::VERSION );
+		update_option( 'pw_version', $this->plugin_version );
 		
 		$this->setup_constants();
 
@@ -216,7 +224,7 @@ class Pinterest_Widgets_Admin {
 
 		if ( $this->plugin_screen_hook_suffix == $screen->id ) {
 			// Plugin admin CSS. Tack on plugin version.
-			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), Pinterest_Widgets::VERSION );
+			wp_enqueue_style( $this->plugin_slug .'-admin-styles', plugins_url( 'assets/css/admin.css', __FILE__ ), array(), $this->plugin_version );
 		}
 	}
 
@@ -234,15 +242,6 @@ class Pinterest_Widgets_Admin {
 			$this->plugin_slug,
 			array( $this, 'display_plugin_admin_page' )
 		);
-		/*
-		$this->plugin_screen_hook_suffix = add_options_page(
-			__( 'Page Title', $this->plugin_slug ),
-			__( 'Menu Text', $this->plugin_slug ),
-			'manage_options',
-			$this->plugin_slug,
-			array( $this, 'display_plugin_admin_page' )
-		);
-		*/
 	}
 
 	/**

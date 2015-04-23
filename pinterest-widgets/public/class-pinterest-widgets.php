@@ -21,7 +21,7 @@ class Pinterest_Widgets {
 	 *
 	 * @var     string
 	 */
-	const VERSION = '1.0.6.1';
+	protected static $version = '1.0.6.1';
 
 	/**
 	 * Unique identifier for this plugin.
@@ -30,7 +30,7 @@ class Pinterest_Widgets {
 	 *
 	 * @var      string
 	 */
-	protected $plugin_slug = 'pinterest-widgets';
+	protected static $plugin_slug = 'pinterest-widgets';
 
 	/**
 	 * Instance of this class.
@@ -95,7 +95,7 @@ class Pinterest_Widgets {
 	 *
 	*/
 	public function enqueue_scripts() {
-			wp_register_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), self::VERSION, true );
+		wp_register_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), self::$version, true );
 	}
 	
 	/**
@@ -105,12 +105,14 @@ class Pinterest_Widgets {
 	 *
 	 * @return    Plugin slug variable.
 	 */
-	public function get_plugin_slug() {
-		return $this->plugin_slug;
+	public static function get_plugin_slug() {
+		return self::$plugin_slug;
 	}
-	
-	public function get_plugin_version() {
-		return self::VERSION;
+
+	// Return the plugin version for use outside this class.
+
+	public static function get_plugin_version() {
+		return self::$version;
 	}
 
 	/**
@@ -121,7 +123,6 @@ class Pinterest_Widgets {
 	 * @return    object    A single instance of this class.
 	 */
 	public static function get_instance() {
-
 		// If the single instance hasn't been set, set it now.
 		if ( null == self::$instance ) {
 			self::$instance = new self;
