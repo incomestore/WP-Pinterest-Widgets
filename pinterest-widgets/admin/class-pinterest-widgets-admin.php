@@ -48,9 +48,6 @@ class Pinterest_Widgets_Admin {
 		$this->plugin_version = Pinterest_Widgets::get_plugin_version();
 		$this->plugin_slug = Pinterest_Widgets::get_plugin_slug();
 
-		var_dump('$this->plugin_version' . $this->plugin_version);
-		var_dump('$this->plugin_slug' . $this->plugin_slug);
-
 		$old = get_option( 'pw_version' );
 		
 		if( version_compare( $old, $this->plugin_version, '<' ) ) {
