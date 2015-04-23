@@ -95,9 +95,7 @@ class Pinterest_Widgets {
 	 *
 	*/
 	public function enqueue_scripts() {
-		//if( ! wp_script_is( 'pib-async-script-loader', 'enqueued' ) ) {
 			wp_register_script( 'pinterest-pinit-js', '//assets.pinterest.com/js/pinit.js', array(), self::VERSION, true );
-		//}
 	}
 	
 	/**

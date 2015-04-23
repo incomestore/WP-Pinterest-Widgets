@@ -57,10 +57,7 @@ class Pinterest_Widgets_Admin {
 		
 		$this->setup_constants();
 
-		
-		
 		// Load the plugin text domain for translations
-		//add_action( 'plugins_loaded', array( $this, 'plugin_textdomain' ) );
 		$this->plugin_textdomain();
 		
 		// Load admin style sheets.
