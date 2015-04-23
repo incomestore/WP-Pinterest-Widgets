@@ -76,13 +76,10 @@ Shortcode help available within the plugin admin.
 
 == Changelog ==
 
-= 1.0.7 - TODO =
-
-* Added settings link from plugin page.
-
 = 1.0.6.2 - April 24, 2015 =
 
 * Fixed upgrade routine check failing in some cases (take 2). Affects only PHP 5.2.x users.
+* Fix settings link on plugin listing page.
 
 = 1.0.6.1 - April 23, 2015 =
 
