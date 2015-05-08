@@ -1,7 +1,7 @@
 === Pinterest Widgets ===
 Contributors: pderksen, nickyoung87
 Tags: pinterest, widgets, follow button, pin widget, board widget, profile widget, social, social media, image, images, photo, photos, social button
-Requires at least: 3.9.3
+Requires at least: 3.9
 Tested up to: 4.2
 Stable tag: 1.0.6.2
 License: GPLv2 or later
